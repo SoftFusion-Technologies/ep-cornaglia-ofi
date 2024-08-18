@@ -1,27 +1,37 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../Images/conectate-logo.jpeg'
-
+import '../Styles/nav.css'
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation(); // para obtener ruta actual
 
-    const handleMenuToggle = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    const handleCloseMenu = () => {
-        setIsMenuOpen(false);
-    };
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
   
-  const scrollPlanes = () => {
-    const element = document.getElementById('planes');
+  const scrollInicio = () => {
+    const element = document.getElementById('inicio');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  
+  const scrollPlanes = () => {
+    const element = document.getElementById('planes');
+    if (element) {
+      const elementTop = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
 
-   
   const scrollContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -29,13 +39,13 @@ const Nav = () => {
     }
   };
     return (
-      <nav className="bg-slate-100 shadow-md font-sans">
+      <nav className="bg-slate-100 shadow-md font-sans fixed top-0 left-0 right-0 z-50">
         <div className="container mx-auto flex items-center justify-between p-1">
           <div className="text-1xl font-bold">
             <Link to="/">
               <span>
                 <img
-                  className="Logo w-1/2 md:w-32 h-auto"
+                  className="Logo w-28 md:w-20 h-auto"
                   src={Logo}
                   alt="Logo"
                 />
@@ -47,9 +57,8 @@ const Nav = () => {
           <div className="flex-1 flex justify-center">
             <ul className="hidden md:flex space-x-10">
               <li>
-                <Link
-                  to="/"
-                  onClick={scrollPlanes}
+                <button
+                  onClick={scrollInicio}
                   className={`text-2xl font-bold ${
                     location.pathname === '/'
                       ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -60,7 +69,7 @@ const Nav = () => {
                   }}
                 >
                   INICIO
-                </Link>
+                </button>
               </li>
               <li>
                 <button
@@ -164,12 +173,12 @@ const Nav = () => {
 
           <ul className="flex flex-col items-center space-y-8">
             <li>
-              <Link
-                to="/"
+              <button
+                onClick={scrollInicio}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 INICIO
-              </Link>
+              </button>
             </li>
             <li>
               <button

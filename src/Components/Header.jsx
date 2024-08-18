@@ -8,7 +8,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
+    <div className="header mt-24" id="inicio">
       <div className="headerContent">
         <div className="w-full text-center text-black pt-10 lg:pt-32">
           <h1 className="title">¡INTERNET EN TODAS PARTES!</h1>
