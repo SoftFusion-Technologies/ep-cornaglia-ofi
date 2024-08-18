@@ -42,18 +42,26 @@ const plans = [
 
 const Pricing = () => {
     return (
-        <>
-            <div className="max-w-xl m-auto">
-                <h1 className="text-center text-5xl my-8 font-semibold">Planes y Servicios</h1>
-                <p className="text-center text-xl semibold mb-4">Conoce nuestros planes diseñados para satisfacer las diferentes necesidades de velocidad y uso, sea en la ciudad o sus aledaños.</p>
-            </div>
-            <div className="flex flex-wrap items-center justify-center max-w-5xl m-auto">
-                <PricingCard {...plans[0]}></PricingCard>
-                <PricingCard {...plans[1]}></PricingCard>
-                <PricingCard {...plans[2]}></PricingCard>
-            </div>
-        </>
-    )
+      <div id="planes">
+        <div className="mt-20 max-w-xl m-auto" data-aos="zoom-in">
+          <h1 className="text-center text-5xl my-8 font-semibold">
+            Planes y Servicios
+          </h1>
+          <p className="text-center text-xl semibold mb-4">
+            Conoce nuestros planes diseñados para satisfacer las diferentes
+            necesidades de velocidad y uso, sea en la ciudad o sus aledaños.
+          </p>
+        </div>
+        <div
+          data-aos="zoom-in"
+          className="flex flex-wrap items-center justify-center max-w-5xl m-auto"
+        >
+          <PricingCard {...plans[0]}></PricingCard>
+          <PricingCard {...plans[1]}></PricingCard>
+          <PricingCard {...plans[2]}></PricingCard>
+        </div>
+      </div>
+    );
 }
 
 export default Pricing;

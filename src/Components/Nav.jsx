@@ -13,7 +13,13 @@ const Nav = () => {
     const handleCloseMenu = () => {
         setIsMenuOpen(false);
     };
-
+  
+  const scrollPlanes = () => {
+    const element = document.getElementById('planes');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
     return (
       <nav className="bg-slate-100 shadow-md font-sans">
         <div className="container mx-auto flex items-center justify-between p-1">
@@ -35,40 +41,47 @@ const Nav = () => {
               <li>
                 <Link
                   to="/"
+                  onClick={scrollPlanes}
                   className={`text-2xl font-bold ${
-                    location.pathname === '/' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                     : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500' 
+                    location.pathname === '/'
+                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
                   }`}
                   style={{
-                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                    paddingBottom: '10px'
                   }}
                 >
                   INICIO
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/planes"
+                <button
+                  onClick={scrollPlanes}
                   className={`text-2xl font-bold ${
-                    location.pathname === '/planes' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500' 
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    location.pathname === '/ss'
+                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
                   }`}
                   style={{
-                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                    paddingBottom: '10px',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer'
                   }}
                 >
                   PLANES
-                </Link>
+                </button>
               </li>
               <li>
                 <Link
                   to="/contacto"
                   className={`text-2xl font-bold ${
-                    location.pathname === '/contacto' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500' 
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    location.pathname === '/contacto'
+                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
                   }`}
                   style={{
-                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                    paddingBottom: '10px'
                   }}
                 >
                   CONTACTO
@@ -78,11 +91,12 @@ const Nav = () => {
                 <Link
                   to="/gestion"
                   className={`text-2xl font-bold ${
-                    location.pathname === '/gestion' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500' 
-                    :'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    location.pathname === '/gestion'
+                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
                   }`}
                   style={{
-                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                    paddingBottom: '10px'
                   }}
                 >
                   GESTIÓN
@@ -150,12 +164,22 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              <Link
-                to="/planes"
-                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+              <button
+                onClick={scrollPlanes}
+                className={`text-2xl font-bold ${
+                  location.pathname === '/'
+                    ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                }`}
+                style={{
+                  paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer'
+                }}
               >
                 PLANES
-              </Link>
+              </button>
             </li>
             <li>
               <Link
@@ -180,14 +204,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-
-
-
-
-
-
-
-
-
-
