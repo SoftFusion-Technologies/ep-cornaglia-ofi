@@ -45,7 +45,7 @@ const Nav = () => {
             <Link to="/">
               <span>
                 <img
-                  className="Logo w-28 md:w-20 h-auto"
+                  className="Logo w-20 md:w-20 h-auto"
                   src={Logo}
                   alt="Logo"
                   onClick={scrollInicio}
