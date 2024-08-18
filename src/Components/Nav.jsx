@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../Images/conectate-logo.jpeg'
 
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation(); // para obtener ruta actual
 
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -34,7 +35,13 @@ const Nav = () => {
               <li>
                 <Link
                   to="/"
-                  className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                  className={`text-2xl font-bold ${
+                    location.pathname === '/' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                     : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500' 
+                  }`}
+                  style={{
+                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                  }}
                 >
                   INICIO
                 </Link>
@@ -42,7 +49,13 @@ const Nav = () => {
               <li>
                 <Link
                   to="/planes"
-                  className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                  className={`text-2xl font-bold ${
+                    location.pathname === '/planes' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500' 
+                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                  }`}
+                  style={{
+                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                  }}
                 >
                   PLANES
                 </Link>
@@ -50,7 +63,13 @@ const Nav = () => {
               <li>
                 <Link
                   to="/contacto"
-                  className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                  className={`text-2xl font-bold ${
+                    location.pathname === '/contacto' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500' 
+                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                  }`}
+                  style={{
+                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                  }}
                 >
                   CONTACTO
                 </Link>
@@ -58,7 +77,13 @@ const Nav = () => {
               <li>
                 <Link
                   to="/gestion"
-                  className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                  className={`text-2xl font-bold ${
+                    location.pathname === '/gestion' ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500' 
+                    :'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                  }`}
+                  style={{
+                    paddingBottom: '10px', // Ajusta esto para separar el texto del borde
+                  }}
                 >
                   GESTIÓN
                 </Link>
@@ -90,13 +115,13 @@ const Nav = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-slate-100 z-50 flex justify-center items-center transition-opacity duration-300 ease-in-out ${
+          className={`fixed inset-0 bg-black-80  z-50 flex justify-center items-center transition-opacity duration-300 ease-in-out ${
             isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
           {/* Close Button */}
           <button
-            className="absolute top-4 right-4 text-gray-700 hover:text-red-500"
+            className="absolute top-4 right-4 text-[rgb(0,148,221)] hover:text-red-500"
             onClick={handleCloseMenu}
           >
             <svg
@@ -115,11 +140,11 @@ const Nav = () => {
             </svg>
           </button>
 
-          <ul className="space-y-4">
+          <ul className="flex flex-col items-center space-y-8">
             <li>
               <Link
                 to="/"
-                className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 INICIO
               </Link>
@@ -127,7 +152,7 @@ const Nav = () => {
             <li>
               <Link
                 to="/planes"
-                className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 PLANES
               </Link>
@@ -135,7 +160,7 @@ const Nav = () => {
             <li>
               <Link
                 to="/contacto"
-                className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 CONTACTO
               </Link>
@@ -143,7 +168,7 @@ const Nav = () => {
             <li>
               <Link
                 to="/gestion"
-                className="text-gray-700 text-2xl font-bold hover:text-red-500"
+                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 GESTIÓN
               </Link>
@@ -155,6 +180,8 @@ const Nav = () => {
 };
 
 export default Nav;
+
+
 
 
 
