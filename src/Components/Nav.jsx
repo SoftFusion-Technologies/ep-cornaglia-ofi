@@ -15,10 +15,10 @@ const Nav = () => {
   };
   
   const scrollInicio = () => {
-    const element = document.getElementById('inicio');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
   };
   
   const scrollPlanes = () => {
@@ -48,6 +48,7 @@ const Nav = () => {
                   className="Logo w-28 md:w-20 h-auto"
                   src={Logo}
                   alt="Logo"
+                  onClick={scrollInicio}
                 />
               </span>
             </Link>
