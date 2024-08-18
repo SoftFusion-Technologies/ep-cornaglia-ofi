@@ -20,6 +20,14 @@ const Nav = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+   
+  const scrollContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
     return (
       <nav className="bg-slate-100 shadow-md font-sans">
         <div className="container mx-auto flex items-center justify-between p-1">
@@ -73,10 +81,10 @@ const Nav = () => {
                 </button>
               </li>
               <li>
-                <Link
-                  to="/contacto"
+                <button
+                  onClick={scrollContact}
                   className={`text-2xl font-bold ${
-                    location.pathname === '/contacto'
+                    location.pathname === '/ss'
                       ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
                       : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
                   }`}
@@ -85,7 +93,7 @@ const Nav = () => {
                   }}
                 >
                   CONTACTO
-                </Link>
+                </button>
               </li>
               <li>
                 <Link
@@ -166,28 +174,18 @@ const Nav = () => {
             <li>
               <button
                 onClick={scrollPlanes}
-                className={`text-2xl font-bold ${
-                  location.pathname === '/'
-                    ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                }`}
-                style={{
-                  paddingBottom: '10px', // Ajusta esto para separar el texto del borde
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer'
-                }}
+                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 PLANES
               </button>
             </li>
             <li>
-              <Link
-                to="/contacto"
+              <button
+                onClick={scrollContact}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 CONTACTO
-              </Link>
+              </button>
             </li>
             <li>
               <Link
