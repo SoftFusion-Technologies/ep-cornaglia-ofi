@@ -4,6 +4,7 @@ import Nav from './Components/Nav';
 import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import NotFound from './Pages/NotFound';
+import Separator from './Components/Separator';
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Home></Home>} />
         <Route path="/*" element={<NotFound></NotFound>} />
       </Routes>
+      <Separator />
       <Footer />
     </Router>
   );
