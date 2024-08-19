@@ -9,6 +9,7 @@ footer{
     color: #fff;
     background-color: #000;
 }
+
 .footer > *{
     flex: 1 100%;
 }
@@ -109,8 +110,100 @@ h2{
         flex: 2 0px;
     }
 }
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 599px) {
+
+    .footer {
+        margin-top: 0;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-left {
+        margin: 0 auto; 
+        padding: 0 10px; 
+    }
+
+    .titulo {
+        margin-bottom: 20px;
+    }
+
+    #description-id {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 10px;
+        max-width: 100%;
+    }
+
+    .footer-right {
+        display: block; /*los elementos de la lista se muestren en una columna */
+        margin: 0 auto; 
+    }
+
+    .footer-right .box {
+        padding: 20px 0; 
+    }
+
+    .footer-right .box li {
+        margin-bottom: 5px; /* Ajusta el margen según sea necesario */
+    }
+
+    .footer-left .socials {
+        display: flex;
+        justify-content: center; /* Centra los íconos de redes sociales */
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .footer-bottom {
+        text-align: center; /* Centra el texto en la parte inferior */
+    }
+
+    .footer-bottom span {
+        display: block; /* Asegura que los spans estén en líneas separadas */
+        margin-top: 5px; /* Espaciado entre los textos */
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .footer-left, .socials, .footer-right li {
+    opacity: 0; /* Inicialmente invisibles */
+    transform: translateY(-20px); /* Inicialmente desplazados hacia abajo */
+    transition: opacity 0.7s ease, transform 0.7s ease; /* Transición suave */
+  }
+  
+  .footer-left.appear, .socials.appear, .footer-right li.appear {
+    opacity: 1; /* Hacer visibles */
+    transform: translateY(0); /* Restaurar la posición original */
+  }
+  
+  .footer-left.appear {
+    animation: fadeInUp 3s ease forwards;
+  }
+  
+  .socials.appear {
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.75s; /* Retrasar la animación */
+  }
+  
+  .footer-right li.appear {
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 1.5s; /* Retrasar la animación en cascada */
+  }
 
 
 
 
 
+    

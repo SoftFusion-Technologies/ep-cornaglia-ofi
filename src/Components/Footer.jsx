@@ -1,24 +1,58 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../Styles/Footer.css"
 import { FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa"
 
 const Footer = () => {
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+          };
+      
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                // Dejar de observar una vez que se ha añadido la clase
+                observer.unobserve(entry.target);
+              }
+            });
+          }, observerOptions);
+      
+          // Seleccionar los elementos a observar
+          const footerLeft = document.querySelector('.footer-left');
+          const socials = document.querySelector('.socials');
+          const footerRightItems = document.querySelectorAll('.footer-right li');
+      
+          // Observar los elementos
+          observer.observe(footerLeft);
+          observer.observe(socials);
+          footerRightItems.forEach(item => observer.observe(item));
+      
+          // Limpieza del observer al desmontar el componente
+          return () => {
+            observer.disconnect();
+          };
+        }, []);
+
   return (
     <footer className="footer">
-        <div className="footer-left">
-            <h2 className="titulo">
-                CONECTATE WIFI
-            </h2>
-            <p className="description">
-            Brindamos conexiones de alta calidad a través de equipos de última tecnología.
-            Nuestra misión es ofrecer a nuestros clientes un servicio de internet superior y confiable.
-            </p>
-            <div className="socials">
-                <li><Link to="#"><FaFacebook /></Link></li>
-                <li><Link to="#"><FaInstagram /></Link></li>
-                <li><Link to="#"><FaTwitter /></Link></li>
-            </div>
-        </div>
+                <div className="footer-left">
+                    <h2 className="titulo">
+                    CONECTATE WIFI
+                    </h2>
+                    <p id="description-id" className="description">
+                    Brindamos conexiones de alta calidad a través de equipos de última tecnología.
+                    Nuestra misión es ofrecer a nuestros clientes un servicio de internet superior y confiable.
+                    </p>
+                    <div className="socials">
+                        <li><Link to="#"><FaFacebook /></Link></li>
+                        <li><Link to="#"><FaInstagram /></Link></li>
+                        <li><Link to="#"><FaTwitter /></Link></li>
+                    </div>
+                </div>    
         <ul className="footer-right">
             <li>
                 <h2>Documentos</h2>
