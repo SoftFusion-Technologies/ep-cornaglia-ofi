@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../Images/conectate-logo.jpeg'
+import Logo from '../Images/Conectatelogo.png'
 import '../Styles/nav.css'
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,6 +34,12 @@ const Nav = () => {
 
   const scrollContact = () => {
     const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+    const scrollGestion = () => {
+    const element = document.getElementById('gestion');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -90,7 +96,24 @@ const Nav = () => {
                   PLANES
                 </button>
               </li>
+
               <li>
+                <Link
+                  // to="/gestion"
+                  onClick={scrollGestion}
+                  className={`text-2xl font-bold ${
+                    location.pathname === '/gestion'
+                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                  }`}
+                  style={{
+                    paddingBottom: '10px'
+                  }}
+                >
+                  GESTIÓN
+                </Link>
+              </li>
+                            <li>
                 <button
                   onClick={scrollContact}
                   className={`text-2xl font-bold ${
@@ -104,21 +127,6 @@ const Nav = () => {
                 >
                   CONTACTO
                 </button>
-              </li>
-              <li>
-                <Link
-                  to="/gestion"
-                  className={`text-2xl font-bold ${
-                    location.pathname === '/gestion'
-                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                  }`}
-                  style={{
-                    paddingBottom: '10px'
-                  }}
-                >
-                  GESTIÓN
-                </Link>
               </li>
             </ul>
           </div>

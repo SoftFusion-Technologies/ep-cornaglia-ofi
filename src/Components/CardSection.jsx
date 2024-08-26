@@ -6,18 +6,18 @@ const CardSection = () => {
   return (
     <div className="card-section">
       <Card
-        icon="🚀"
-        title="Internet de Alta Velocidad"
+        icon="🔌"
+        title="Internet por fibra óptica"
         description="Mantén videoconferencias fluidas y colabora en tiempo real, sin interrupciones."
       />
       <Card
-        icon="📊"
-        title="Tecnología de Punta"
+        icon="🌐"
+        title="Internet por aire"
         description="Disfruta de la mejor experiencia online con la tecnología más avanzada del mercado."
       />
       <Card
-        icon="👨‍💻"
-        title="Soporte Técnico"
+        icon="📺"
+        title="Servicio de TV"
         description="Un equipo de expertos está disponible para ayudarte a resolver cualquier problema técnico."
       />
     </div>

@@ -3,7 +3,7 @@ import { FaCloudUploadAlt,FaFileInvoiceDollar, FaHeadset } from "react-icons/fa"
 
 const GestServicios = () => {
   return (
-    <div className='grid grid-cols-1 gap-6 pt-20'>
+    <div className='grid grid-cols-1 gap-6 pt-20' id='gestion'>
         <div className='bg-gray-50 shadow-md rounded-lg p-6'>
             <h3 className='text-2xl font-bold mb-4'>
                 Gestiona tus servicios

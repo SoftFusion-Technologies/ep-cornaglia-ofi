@@ -11,7 +11,7 @@ const Main = () => {
           ¿QUIÉNES SOMOS?
         </h2>
         <p className="text-lg text-gray-600 mb-4">
-          En Conectate WiFi somos una empresa local que nació para resolver las
+          En <strong>CONECTATE GROUP</strong> somos una empresa local que nació para resolver las
           necesidades de conexión en nuestro municipio y alrededores. Contamos
           con un equipo capacitado que instala servicios modernos y utiliza la
           última tecnología para garantizarte la mejor experiencia en internet.

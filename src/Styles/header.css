@@ -14,7 +14,7 @@
 }
 
 .header {
-    background-image: linear-gradient(to bottom, #df117b, #0094dd, #ffffff);
+    background-image: linear-gradient(to bottom, #f40808, #dc4f4f, #ffffff);
     color: var(--black);
     display: flex;
     flex-direction: column;
