@@ -7,6 +7,8 @@ import Pricing from '../Components/Pricing';
 import Main from '../Components/Main';
 import Contact from '../Components/Contact';
 
+import GestServicios from './GestServicios';  
+
 const Home = () => {
   return (
     <div>
@@ -14,6 +16,7 @@ const Home = () => {
       <CardSection></CardSection>
       <Main></Main>
       <Pricing></Pricing>
+      <GestServicios></GestServicios>
       <Contact></Contact>
     </div>
   );

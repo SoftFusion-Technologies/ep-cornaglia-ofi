@@ -5,11 +5,13 @@ import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import NotFound from './Pages/NotFound';
 import Separator from './Components/Separator';
+import AnimCursor from './Components/Cursor'; 
 
 const App = () => {
 
   return (
     <Router>
+      <AnimCursor />
       <Nav />
       <Routes>
         <Route path="/" element={<Home></Home>} />

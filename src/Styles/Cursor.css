@@ -1,0 +1,21 @@
+/* Estilo para el cursor personalizado */
+/* Cursor.css */
+.custom-cursor {
+  position: fixed;
+  border-radius: 50%;
+  background-color: rgba(242, 26, 141, 0.7);
+  width: 20px;
+  height: 20px;
+  pointer-events: none; /* Asegúrate de que el cursor no interfiera con los eventos del mouse */
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+  z-index: 9999; /* Asegúrate de que el cursor esté en el nivel más alto */
+}
+
+/* Cambiar tamaño del cursor cuando está sobre un enlace */
+.custom-cursor.hover {
+  width: 30px;
+  height: 30px;
+}
+
+  
