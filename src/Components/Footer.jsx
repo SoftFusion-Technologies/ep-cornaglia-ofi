@@ -59,7 +59,7 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link to="#">
+            <Link to="https://www.instagram.com/conectate.group/" target='_blank'>
               <FaInstagram />
             </Link>
           </li>
@@ -110,9 +110,9 @@ const Footer = () => {
         <li>
           <h2>Contáctanos</h2>
           <ul className="box">
-            <li>
+            {/* <li>
               <Link to="#">3865 111111</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="#">Ir al WhatsApp</Link>
             </li>

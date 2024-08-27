@@ -6,7 +6,7 @@ const Contact = () => {
     firstName: '',
     lastName: '',
     email: '',
-    website: '',
+    tel: '',
     message: ''
   });
 
@@ -29,7 +29,7 @@ const Contact = () => {
             <div className="input-data">
               <input
                 type="text"
-                name="nombre"
+                name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
                 required
@@ -40,7 +40,7 @@ const Contact = () => {
             <div className="input-data">
               <input
                 type="text"
-                name="Apellido"
+                name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
                 required
@@ -63,9 +63,9 @@ const Contact = () => {
             </div>
             <div className="input-data">
               <input
-                type="tel"
+                type="number"
                 name="tel"
-                value={formData.website}
+                value={formData.tel}
                 onChange={handleChange}
                 required
               />
