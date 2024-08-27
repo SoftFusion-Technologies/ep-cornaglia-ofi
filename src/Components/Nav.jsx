@@ -78,7 +78,24 @@ const Nav = () => {
                   INICIO
                 </button>
               </li>
+  
               <li>
+                <Link
+                  // to="/gestion"
+                  onClick={scrollGestion}
+                  className={`text-2xl font-bold ${
+                    location.pathname === '/gestion'
+                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                  }`}
+                  style={{
+                    paddingBottom: '10px'
+                  }}
+                >
+                  GESTIÓN
+                </Link>
+              </li>
+                <li>
                 <button
                   onClick={scrollPlanes}
                   className={`text-2xl font-bold ${
@@ -96,24 +113,9 @@ const Nav = () => {
                   PLANES
                 </button>
               </li>
-
+              
+              
               <li>
-                <Link
-                  // to="/gestion"
-                  onClick={scrollGestion}
-                  className={`text-2xl font-bold ${
-                    location.pathname === '/gestion'
-                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                  }`}
-                  style={{
-                    paddingBottom: '10px'
-                  }}
-                >
-                  GESTIÓN
-                </Link>
-              </li>
-                            <li>
                 <button
                   onClick={scrollContact}
                   className={`text-2xl font-bold ${
@@ -189,13 +191,13 @@ const Nav = () => {
                 INICIO
               </button>
             </li>
-            <li>
-              <button
-                onClick={scrollPlanes}
+             <li>
+              <Link
+                to="/gestion"
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
-                PLANES
-              </button>
+                GESTIÓN
+              </Link>
             </li>
             <li>
               <button
@@ -205,14 +207,15 @@ const Nav = () => {
                 CONTACTO
               </button>
             </li>
-            <li>
-              <Link
-                to="/gestion"
+               <li>
+              <button
+                onClick={scrollPlanes}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
-                GESTIÓN
-              </Link>
+                PLANES
+              </button>
             </li>
+        
           </ul>
         </div>
       </nav>

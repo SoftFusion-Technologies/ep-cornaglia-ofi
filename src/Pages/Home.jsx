@@ -16,9 +16,9 @@ const Home = () => {
       <Header></Header>
       <CardSection></CardSection>
       <Main></Main>
-      <Pricing></Pricing>
       <GestServicios></GestServicios>
       <InfoContacts></InfoContacts>
+      <Pricing></Pricing>
       <Contact></Contact>
     </div>
   );

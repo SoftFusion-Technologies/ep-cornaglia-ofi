@@ -7,8 +7,8 @@ const Sucursal = ({ ciudad, direccion, telefono, horarios }) => (
                      transition-shadow duration-300">
                         
       <h2 className='text-2xl font-bold text-gray-800'>{ciudad}</h2>
-        <p className="text-gray-600 mt-1"><strong>Dirección:</strong> {direccion}</p>
-            <p className="text-gray-600">
+        <div className="text-gray-600 mt-1"><strong>Dirección:</strong> {direccion}</div>
+            <div className="text-gray-600">
                 <div className="flex items-center mt-2">
                     <strong>Teléfono:</strong>
                     <div className="flex items-center ml-1">
@@ -19,12 +19,12 @@ const Sucursal = ({ ciudad, direccion, telefono, horarios }) => (
                     </a>
                     </div>
                 </div>
-            </p>  
-      <p className="text-gray-600 mt-2"><strong>Horarios de Atención:</strong>
+        </div>  
+      <div className="text-gray-600 mt-2"><strong>Horarios de Atención:</strong>
             <div className="flex items-center mt-1">
                 {horarios}
             </div>
-        </p>  
+        </div>  
     </div>
   );
 
