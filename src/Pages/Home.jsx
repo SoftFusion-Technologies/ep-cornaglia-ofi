@@ -7,7 +7,8 @@ import Pricing from '../Components/Pricing';
 import Main from '../Components/Main';
 import Contact from '../Components/Contact';
 
-import GestServicios from './GestServicios';  
+import GestServicios from './GestServicios';
+import InfoContacts from '../Components/InfoContacts'; 
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Main></Main>
       <Pricing></Pricing>
       <GestServicios></GestServicios>
+      <InfoContacts></InfoContacts>
       <Contact></Contact>
     </div>
   );
