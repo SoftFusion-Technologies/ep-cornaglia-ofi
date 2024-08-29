@@ -9,6 +9,7 @@ import Contact from '../Components/Contact';
 
 import GestServicios from './GestServicios';
 import InfoContacts from '../Components/InfoContacts'; 
+import InfoPagos from '../Components/InfoPagos'; // Solo para la visualización, entre Pricing y Contact
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <GestServicios></GestServicios>
       <InfoContacts></InfoContacts>
       <Pricing></Pricing>
+      <InfoPagos></InfoPagos>
       <Contact></Contact>
     </div>
   );
