@@ -1,15 +1,14 @@
 import React from 'react'
-import Header from '../Components/Header'
-import CardSection from '../Components/CardSection';
+import Header from '../Components/Header/Header'
+import CardSection from '../Components/Cards/CardSection';
 
 // import PricingCard from '../Components/PricingCard';
-import Pricing from '../Components/Pricing';
-import Main from '../Components/Main';
+import Pricing from '../Components/Header/Pricing';
+import Main from '../Components/Header/Main';
 import Contact from '../Components/Contact';
 
 import GestServicios from './GestServicios';
-import InfoContacts from '../Components/InfoContacts'; 
-import InfoPagos from '../Components/InfoPagos'; // Solo para la visualización, entre Pricing y Contact
+import InfoContacts from '../Components/Info/InfoContacts'; 
 
 const Home = () => {
   return (

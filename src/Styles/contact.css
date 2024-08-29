@@ -30,7 +30,7 @@
   font-size: 41px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  background: linear-gradient(to right, #ff4d4d, #ff0000, #ff4d4d, #ff0000);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -133,7 +133,7 @@ form .form-row .textarea{
   width: 300%;
   position: absolute;
   left: -100%;
-  background: linear-gradient(to right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  background: linear-gradient(to right, #ff4d4d, #ff0000, #ff4d4d, #ff0000);
   transition: all 0.4s;
 }
 

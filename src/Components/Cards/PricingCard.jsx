@@ -34,15 +34,15 @@ const PricingCard = ({
           <li className="p-2">&#128220; {featuresList[3]}</li>
         </ul>
         <div className="flex justify-center items-center">
-          <button
-            className={`m-4 py-4 w-full bg-sky-200 rounded-xl text-2xl hover:bg-sky-300 
-                    focus:ring-2 focus:ring-sky-400 ${
-                      isMostPopular
-                        ? 'bg-sky-400 hover:bg-fuchsia-400 focus:ring-2 focus:ring-sky-500'
-                        : null
-                    }`}
+        <button
+            className={`m-4 py-4 w-full bg-red-500 text-white rounded-xl text-2xl hover:bg-red-300  
+                        focus:ring-2 focus:ring-red-400 ${
+                          isMostPopular
+                            ? 'bg-red-400 hover:bg-red-500 focus:ring-2 focus:ring-red-500 text-white'
+                            : null
+                        }`}
           >
-            Contratar
+            CONTRATAR
           </button>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/header.css'; // Importación de CSS tradicional
+import '../../Styles/header.css'; // Importación de CSS tradicional
 
 const Header = () => {
   const handleScroll = () => {

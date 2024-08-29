@@ -1,13 +1,13 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Nav from './Components/Nav';
+import Nav from './Components/Header/Nav';
 import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import NotFound from './Pages/NotFound';
 import Separator from './Components/Separator';
 import AnimCursor from './Components/Cursor'; 
 import MiPortal from './Pages/MiPortal';
-import InfoPagos from './Components/InfoPagos';
+import InfoPagos from './Components/Info/InfoPagos';
 
 const App = () => {
 

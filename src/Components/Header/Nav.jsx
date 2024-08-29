@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../Images/Conectatelogo.png'
-import '../Styles/nav.css'
+import Logo from '../../Images/Conectatelogo.png'
+import '../../Styles/nav.css'
 const Nav = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation(); // para obtener ruta actual

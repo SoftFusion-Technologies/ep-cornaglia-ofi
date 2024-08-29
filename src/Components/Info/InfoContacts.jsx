@@ -1,4 +1,4 @@
-import Sucursal from "./Sucursal";
+import Sucursal from "../Sucursal";
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaWhatsapp } from "react-icons/fa"
 import PropTypes from 'prop-types';  

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import InfoContacts from '../Components/InfoContacts';
+import InfoContacts from '../Components/Info/InfoContacts';
 
 const MiPortal = () => {
     useEffect(() => {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import PricingCard from "./PricingCard";
+import PricingCard from "../Cards/PricingCard";
 
 const plans = [
     {
