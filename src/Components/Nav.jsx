@@ -64,6 +64,7 @@ const Nav = () => {
           <div className="flex-1 flex justify-center">
             <ul className="hidden md:flex space-x-10">
               <li>
+                <Link to="/">
                 <button
                   onClick={scrollInicio}
                   className={`text-2xl font-bold ${
@@ -76,7 +77,9 @@ const Nav = () => {
                   }}
                 >
                   INICIO
-                </button>
+                  </button>
+                </Link>
+                  
               </li>
   
               <li>
@@ -191,13 +194,13 @@ const Nav = () => {
                 INICIO
               </button>
             </li>
-             <li>
-              <Link
-                to="/gestion"
+          <li>
+              <button
+                onClick={scrollGestion}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
-                GESTIÓN
-              </Link>
+                GESTION
+              </button>
             </li>
             <li>
               <button
