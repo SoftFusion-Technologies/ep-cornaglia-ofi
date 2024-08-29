@@ -64,6 +64,7 @@ const Nav = () => {
           <div className="flex-1 flex justify-center">
             <ul className="hidden md:flex space-x-10">
               <li>
+                <Link to="/">
                 <button
                   onClick={scrollInicio}
                   className={`text-2xl font-bold ${
@@ -76,7 +77,9 @@ const Nav = () => {
                   }}
                 >
                   INICIO
-                </button>
+                  </button>
+                </Link>
+                  
               </li>
   
               <li>

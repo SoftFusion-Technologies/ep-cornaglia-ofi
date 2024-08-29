@@ -76,10 +76,10 @@ const InfoContacts = () => {
                     <p className="text-gray-600 space-y-2">
                         <strong>Servicio Técnico:</strong>
                         <span className="flex items-center">
-                            <WhatsAppLink number="3865-219096" />3865-219096
+                            <WhatsAppLink number="+5493865219096" />3865-219096
                         </span>
                         <span className="flex items-center">
-                            <WhatsAppLink number="3865-320780" />3865-320780
+                            <WhatsAppLink number="+5493865320780" />3865320780
                         </span>
                     </p>
                 </div>
@@ -88,7 +88,7 @@ const InfoContacts = () => {
                      <p className="text-gray-600 space-y-2">
                         <strong>Pagos y Facturas:</strong><br />
                         <span className="flex items-center">
-                            <WhatsAppLink number="3865-239239"/>3865-239239
+                            <WhatsAppLink number="+5493865239239"/>3865-239239
                         </span> 
                     </p>
                 </div>
@@ -97,7 +97,7 @@ const InfoContacts = () => {
                     <p className="text-gray-600 space-y-2">
                         <strong>Ventas:</strong><br />
                         <span className="flex items-center">
-                            <WhatsAppLink number="3865-266909"/>3865-266909
+                            <WhatsAppLink number="+5493865266909"/>3865-266909
                         </span> 
                     </p>
                 </div>
