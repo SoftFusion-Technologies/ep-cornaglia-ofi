@@ -20,7 +20,6 @@ const Home = () => {
       <GestServicios></GestServicios>
       <InfoContacts></InfoContacts>
       <Pricing></Pricing>
-      <InfoPagos></InfoPagos>
       <Contact></Contact>
     </div>
   );

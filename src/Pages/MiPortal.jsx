@@ -37,9 +37,8 @@ const MiPortal = () => {
                 </div>
                 
             </div>
-                    <InfoContacts />
-            
-</>
+         <InfoContacts />
+    </>
     );
 };
 

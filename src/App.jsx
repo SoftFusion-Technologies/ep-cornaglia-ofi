@@ -7,6 +7,7 @@ import NotFound from './Pages/NotFound';
 import Separator from './Components/Separator';
 import AnimCursor from './Components/Cursor'; 
 import MiPortal from './Pages/MiPortal';
+import InfoPagos from './Components/InfoPagos';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home></Home>} />
         <Route path="/portal" element={<MiPortal></MiPortal>} />
+        <Route path='/autogestion' element={<InfoPagos/>}></Route>
         <Route path="/*" element={<NotFound></NotFound>} />
       </Routes>
       <Separator />

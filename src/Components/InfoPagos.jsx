@@ -1,5 +1,6 @@
 import InfoPagosCard from "./InfoPagosCard"
 import InfoPagosButtons from "./InfoPagosButtons"
+import { useEffect } from "react";
 
 const infoPagosCardProps = [
     {
@@ -16,9 +17,14 @@ const infoPagosCardProps = [
     }
 ]
 
+
 const InfoPagos = () => {
+        useEffect(() => {
+        // Desplaza la página al top cuando el componente se monta
+        window.scrollTo(0, 0);
+    }, []);
     return <>
-        <h1 className="text-5xl text-center my-12 ">
+        <h1 className="text-5xl text-center my-12 mt-28">
             Portal de Autogestión
         </h1>
         <div className="flex flex-wrap justify-center gap-6">
