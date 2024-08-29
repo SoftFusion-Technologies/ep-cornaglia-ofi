@@ -13,10 +13,15 @@ const Sucursal = ({ ciudad, direccion, telefono, horarios }) => (
                     <strong>Teléfono:</strong>
                     <div className="flex items-center ml-1">
                         <span className="flex items-center">{telefono}</span>
-                        <FaPhoneAlt className="w-5 h-5 text-gray-500 ml-3" />
-                    <a href={`https://wa.me/${telefono.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center ml-2">
-                        <FaWhatsapp className="w-5 h-5 ml-2 text-green-500" />
-                    </a>
+                        <a href={`tel:+${telefono.replace(/\D/g, '')}`}>
+                           <FaPhoneAlt className="w-5 h-5 text-gray-500 ml-3" />
+                        </a>
+                        <a href={`https://wa.me/${telefono.replace(/\D/g, '')}`} 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           className="flex items-center ml-2">
+                           <FaWhatsapp className="w-5 h-5 ml-2 text-green-500" />
+                        </a>
                     </div>
                 </div>
         </div>  
