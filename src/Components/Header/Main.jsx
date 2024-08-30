@@ -1,5 +1,5 @@
 import React from 'react';
-import FotoPerson from '../../Images/imgMain.png'
+import FotoPerson from '../../Images/imgMain.webp'
 const Main = () => {
   return (
     <div
