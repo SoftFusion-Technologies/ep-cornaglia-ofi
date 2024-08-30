@@ -11,7 +11,7 @@ const WhatsAppLink = ({ number }) => (
         rel="noopener noreferrer"
         className="flex items-center"
     >
-        <FaWhatsapp className="w-5 h-5 mr-1 text-green-500" />
+        <FaWhatsapp className="w-6 h-6 mr-1 text-green-500" />
     </a>
 );
 
@@ -53,19 +53,23 @@ const InfoContacts = () => {
             <h2 className='text-2xl font-bold text-gray-800'>Concepción</h2>
             <div className="mb-4">
             <p className="text-gray-600"><strong>Dirección:</strong> Sarmiento 48</p>
-            <p className="text-gray-600"><strong>Horarios de Atención:</strong> Lun a Vie 08:00 a 13:00 / 17:00 a 21:00 - Sabados 08:30 a 13:00</p>
+            <p className="text-gray-600">
+                <strong className=" mr-1">Horarios de Atención:</strong>
+                <span className="block md:inline mr-2">Lun a Vie: 08:00 a 13:00 / 17:00 a 21:00</span>
+                <span className="block md:inline">Sábados: 08:30 a 13:00</span>
+            </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg border border-gray-300 hover:shadow-lg transition-shadow duration-300">
                     <p className="text-gray-600 space-y-2">
                         <strong>Atención al Cliente:</strong>
                             <span className="flex items-center">
-                                <a href="tel:+3865425787" className="flex items-center">
+                                <a href="tel:3865425787" className="flex items-center">
                                     <FaPhoneAlt className="w-5 h-5 text-gray-500 mr-2" />3865-425787
                                 </a>
                             </span>
                             <span className="flex items-center">
-                                <a href="tel:+3865423441" className="flex items-center">
+                                <a href="tel:3865423441" className="flex items-center">
                                     <FaPhoneAlt className="w-5 h-5 text-gray-500 mr-2" />3865-423441
                                 </a>
                             </span>
@@ -76,10 +80,20 @@ const InfoContacts = () => {
                     <p className="text-gray-600 space-y-2">
                         <strong>Servicio Técnico:</strong>
                         <span className="flex items-center">
-                            <WhatsAppLink number="+5493865219096" />3865-219096
+                            <a href={`https://wa.me/5493865219096`} 
+                               className="flex items-center" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <WhatsAppLink number="+5493865219096" />3865-219096
+                            </a>
                         </span>
                         <span className="flex items-center">
-                            <WhatsAppLink number="+5493865320780" />3865320780
+                            <a href={`https://wa.me/5493865320780`} 
+                               className="flex items-center" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <WhatsAppLink number="+5493865320780" />3865-320780
+                            </a>
                         </span>
                     </p>
                 </div>
@@ -88,7 +102,12 @@ const InfoContacts = () => {
                      <p className="text-gray-600 space-y-2">
                         <strong>Pagos y Facturas:</strong><br />
                         <span className="flex items-center">
-                            <WhatsAppLink number="+5493865239239"/>3865-239239
+                            <a href={`https://wa.me/5493865239239`} 
+                               className="flex items-center" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <WhatsAppLink number="+5493865239239" />3865-239239
+                            </a>
                         </span> 
                     </p>
                 </div>
@@ -97,13 +116,17 @@ const InfoContacts = () => {
                     <p className="text-gray-600 space-y-2">
                         <strong>Ventas:</strong><br />
                         <span className="flex items-center">
-                            <WhatsAppLink number="+5493865266909"/>3865-266909
+                            <a href={`https://wa.me/5493865266909`} 
+                               className="flex items-center" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <WhatsAppLink number="+5493865266909" />3865-266909
+                            </a>
                         </span> 
                     </p>
-                  </div>
+                </div>
             </div>
-          </div>
-          
+        </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-10">
             {sucursalesData.map((sucursal, index) => (
             <Sucursal
@@ -115,16 +138,7 @@ const InfoContacts = () => {
             />
      ))}
        </div>
-       <div className="bg-white p-10 mt-8 rounded-lg border border-gray-200">
-            <h2 className='text-2xl font-bold text-gray-800'>Los Altos</h2>
-            <div className="mb-4">
-            <p className="text-gray-600"><strong>Dirección:</strong> Av. San Martín  270</p>
-            <p className="text-gray-600"><strong>Horarios de Atención:</strong> Lun a Vie 08:00 a 13:00 / 17:00 a 21:00 - Sabados 08:00 a 13:00</p>
-            <p className="text-gray-600"><strong>Teléfono:</strong>+54 9 3834 92-6725</p>
-              </div>
-            
-        </div>
-         
+      
     </div>
 );
 };
