@@ -43,7 +43,13 @@ const Nav = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    };
+  
+    const scrollPeliculas = () => {
+    const element = document.getElementById('peliculas');
+    element.scrollIntoView({ behavior: 'smooth' });
   };
+
     return (
       <nav className="bg-slate-100 shadow-md font-sans fixed top-0 left-0 right-0 z-50">
         <div className="container mx-auto flex items-center justify-between p-1">
@@ -116,7 +122,21 @@ const Nav = () => {
                   PLANES
                 </button>
               </li>
-              
+              <li>
+                <button
+                  onClick={scrollPeliculas}
+                  className={`text-2xl font-bold ${
+                    location.pathname === '/ss'
+                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                  }`}
+                  style={{
+                    paddingBottom: '10px'
+                  }}
+                >
+                  PELÍCULAS
+                </button>
+              </li>
               
               <li>
                 <button
@@ -202,20 +222,29 @@ const Nav = () => {
                 GESTION
               </button>
             </li>
-            <li>
-              <button
-                onClick={scrollContact}
-                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
-              >
-                CONTACTO
-              </button>
-            </li>
+
                <li>
               <button
                 onClick={scrollPlanes}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
                 PLANES
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={scrollPeliculas}
+                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+              >
+                PELÍCULAS
+              </button>
+            </li>
+           <li>
+              <button
+                onClick={scrollContact}
+                className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+              >
+                CONTACTO
               </button>
             </li>
         

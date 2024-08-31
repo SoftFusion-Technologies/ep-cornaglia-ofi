@@ -9,6 +9,7 @@ import Contact from '../Components/Contact';
 
 import GestServicios from './GestServicios';
 import InfoContacts from '../Components/Info/InfoContacts'; 
+import HBOImages from '../Components/HBOImages';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <GestServicios></GestServicios>
       <InfoContacts></InfoContacts>
       <Pricing></Pricing>
+      <HBOImages/>
       <Contact></Contact>
     </div>
   );
