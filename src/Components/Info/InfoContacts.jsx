@@ -138,7 +138,15 @@ const InfoContacts = () => {
             />
      ))}
        </div>
-      
+      <div className="bg-white p-10 mt-8 rounded-lg border border-gray-200">
+            <h2 className='text-2xl font-bold text-gray-800'>Los Altos</h2>
+            <div className="mb-4">
+            <p className="text-gray-600"><strong>Dirección:</strong> Av. San Martín  270</p>
+            <p className="text-gray-600"><strong>Horarios de Atención:</strong> Lun a Vie 08:00 a 13:00 / 17:00 a 21:00 - Sabados 08:00 a 13:00</p>
+            <p className="text-gray-600"><strong>Teléfono:</strong>+54 9 3834 92-6725</p>
+              </div>
+
+        </div>
     </div>
 );
 };

@@ -50,7 +50,7 @@ const HBOImages = () => {
             <ProductCard
               image={darknigth2}
               title="El Caballero de la noche"
-              description="Una batalla épica entre el bien y el mal, donde el implacable Joker pone a prueba los límites de Batman en una lucha por el alma de Gotham. ."
+              description="Una batalla épica entre el bien y el mal, donde el implacable Joker pone a prueba los límites de Batman en una lucha por el alma de Gotham."
             />
           </div> 
           <div
@@ -84,7 +84,7 @@ const HBOImages = () => {
             <ProductCard
               image={wonder5}
               title="Mujer Maravilla"
-              description="una princesa guerrera de las Amazonas, en su viaje desde una isla escondida hacia el mundo exterior durante la Primera Guerra Mundial."
+              description="Una princesa guerrera de las Amazonas, en su viaje desde una isla escondida hacia el mundo exterior durante la Primera Guerra Mundial."
 
             />
           </div>
