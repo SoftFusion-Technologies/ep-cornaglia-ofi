@@ -29,7 +29,7 @@ const HBOImages = () => {
           className="text-center text-lg text-gray-600 mt-4"
           data-aos="fade-left"
         >
-          Descubre nuestra selección exclusiva de alta calidad.
+          Te regalamos HBO y descubrí nuestra selección exclusiva de alta calidad.
         </p>
 
         {/* Primera fila de productos */}
