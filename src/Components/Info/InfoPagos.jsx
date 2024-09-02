@@ -5,11 +5,11 @@ import { useEffect } from "react";
 const infoPagosCardProps = [
     {
         cardTitle: 'Acceso a Servicios',
-        cardBody: 'Gestioná turnos, consultá promociones, suscripciones o actualizá tus datos.'
+        cardBody: 'Gestioná tu consultá haciendo click en, suscripciones o actualizá tus datos.'
     },
     {
         cardTitle: "Pagos y Facturas",
-        cardBody: "Sección para vizualizar facturas, realizar pagos y descargar comprobantes."
+        cardBody: "Sección para vizualizar facturas, realizar pagos y descargar comprobantes accediendo al portal y hacer click en Mis Comprobantes."
     },
     {
         cardTitle: "Reclamos y Feedback",

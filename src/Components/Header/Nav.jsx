@@ -134,7 +134,7 @@ const Nav = () => {
                     paddingBottom: '10px'
                   }}
                 >
-                  PELÍCULAS
+                  TV
                 </button>
               </li>
               
@@ -236,7 +236,7 @@ const Nav = () => {
                 onClick={scrollPeliculas}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
-                PELÍCULAS
+                TV
               </button>
             </li>
            <li>

@@ -6,17 +6,17 @@ const CardSection = () => {
   return (
     <div className="card-section">
       <Card
-        icon="🔌"
+        icon=""
         title="Internet por fibra óptica"
         description="Mantén videoconferencias fluidas y colabora en tiempo real, sin interrupciones."
       />
       <Card
-        icon="🌐"
+        icon=""
         title="Internet por aire"
         description="Disfruta de la mejor experiencia online con la tecnología más avanzada del mercado."
       />
       <Card
-        icon="📺"
+        icon=""
         title="Servicio de TV"
         description="Un equipo de expertos está disponible para ayudarte a resolver cualquier problema técnico."
       />

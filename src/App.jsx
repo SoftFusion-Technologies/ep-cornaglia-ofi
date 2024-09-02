@@ -17,7 +17,7 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home></Home>} />
-        <Route path="/portal" element={<MiPortal></MiPortal>} />
+        <Route path="/portal" element={<InfoPagos></InfoPagos>} />
         <Route path='/autogestion' element={<InfoPagos/>}></Route>
         <Route path="/*" element={<NotFound></NotFound>} />
       </Routes>
