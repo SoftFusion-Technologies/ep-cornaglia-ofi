@@ -3,40 +3,31 @@ import PricingCard from "../Cards/PricingCard";
 
 const plans = [
     {
-        plan: "Base",
-        price: "$24.499,00/mes",
-        description: "Ideal para personas que navegan por internet de forma básica.",
-        featuresList: [
-            "Hasta 15 MBps de Subida",
-            "Hasta 3 MBps de Bajada",
-            "Soporte Técnico Recurrente",
-            "Sin Mínimo de Permanencia"
-        ],
-        isMostPopular: false
+        plan: "30 MB + TV",
+        price: "$25.000",
+        
+        mainFeature: "Servicio de hasta 30 MB",
+
+        isMostPopular: false,
+        contract: "+ Paramount"
     },
     {
-        plan: "Intermedio",
-        price: "$34.499,00/mes",
-        description: "Perfecto para hogares con uso regular y compartido de internet.",
-        featuresList: [
-            "Hasta 50 MBps de Subida",
-            "Hasta 8 MBps de Bajada",
-            "Soporte Técnico Prioritario",
-            "Contrato de 12 Meses"
-        ],
-        isMostPopular: true
+        plan: "50 MB + TV",
+        price: "$25.700",
+
+        mainFeature: "Servicio de hasta 50 MB",
+        
+        isMostPopular: true,
+        contract: "+ HBO + Paramount"
     },
     {
-        plan: "Avanzado",
-        price: "$69.999,00/mes",
-        description: "Necesidades de alta velocidad y múltiples dispositivos.",
-        featuresList: [
-            "Hasta 100 MBps de Subida",
-            "Hasta 20 MBps de Bajada",
-            "Soporte Técnico 24/7",
-            "Sin Contrato Obligatorio"
-        ],
-        isMostPopular: false
+        plan: "100 MB + TV",
+        price: "$27.200",
+        
+        mainFeature: "Servicio de hasta 100 MB",
+
+        isMostPopular: false,
+        contract: "+ Fútbol + HBO"
     }
 ]
 
