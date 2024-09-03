@@ -9,7 +9,6 @@ const plans = [
         mainFeature: "Servicio de hasta 30 MB",
 
         isMostPopular: false,
-        contract: "+ Paramount"
     },
     {
         plan: "50 MB + TV",
@@ -18,7 +17,6 @@ const plans = [
         mainFeature: "Servicio de hasta 50 MB",
         
         isMostPopular: true,
-        contract: "+ HBO + Paramount"
     },
     {
         plan: "100 MB + TV",
@@ -26,8 +24,15 @@ const plans = [
         
         mainFeature: "Servicio de hasta 100 MB",
 
+        isMostPopular: true,
+    },
+    {
+        plan: "300 MB + TV",
+        price: "$30.000",
+        
+        mainFeature: "Servicio de hasta 300 MB",
+
         isMostPopular: false,
-        contract: "+ Fútbol + HBO"
     }
 ]
 
@@ -52,6 +57,7 @@ const Pricing = () => {
           <PricingCard {...plans[0]}></PricingCard>
           <PricingCard {...plans[1]}></PricingCard>
           <PricingCard {...plans[2]}></PricingCard>
+          <PricingCard {...plans[3]}></PricingCard>
         </div>
       </div>
     );
