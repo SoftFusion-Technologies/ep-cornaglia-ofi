@@ -8,11 +8,20 @@ import Separator from './Components/Separator';
 import AnimCursor from './Components/Cursor'; 
 import MiPortal from './Pages/MiPortal';
 import InfoPagos from './Components/Info/InfoPagos';
-
+import WelcomeModal from './Components/WelcomeModal';
+import welcomeImage from '../src/Images/imgWelcome.png';
+import { useState } from 'react';
 const App = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <Router>
+      <WelcomeModal imageUrl={welcomeImage}  />
       <AnimCursor />
       <Nav />
       <Routes>
