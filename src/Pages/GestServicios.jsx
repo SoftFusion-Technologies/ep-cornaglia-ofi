@@ -23,18 +23,28 @@ const GestServicios = () => {
             <div className='flex justify-between bg-gray-100 p-6'>
                 <ul className='space-y-4 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6 w-full'>
                     <div className='flex items-center bg-white p-4 rounded-lg shadow-sm flex-grow hover:shadow-lg transition-shadow duration-300 ease-in-out'>
-                        <Link to="/autogestion" className='flex-shrink-0'>
-                            <div className='w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center'>
-                                {<FaCloudUploadAlt size="2em"/>}
-                              </div>
-                          </Link>
-                          <Link to="/autogestion">
-                        <div className='ml-4'>
-                            <p className='text-lg font-medium'>Mejorar mi plan</p>
+                    <a
+                        href="https://api.whatsapp.com/send?phone=5493865266909&text=Hola%20quiero%20modificar%20mi%20plan,%20mi%20servicio%20está%20a%20nombre%20de:%20(completar)"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='flex-shrink-0'
+                    >
+                        <div className='w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center'>
+                        <FaCloudUploadAlt size="2em" />
                         </div>
-                          </Link>
-                              
+                    </a>
+                    <a
+                        href="https://api.whatsapp.com/send?phone=5493865266909&text=Hola%20quiero%20modificar%20mi%20plan,%20mi%20servicio%20está%20a%20nombre%20de:%20(completar)"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='ml-4'
+                    >
+                        <div>
+                        <p className='text-lg font-medium'>Mejorar mi plan</p>
+                        </div>
+                    </a>
                     </div>
+
                     <div className='flex items-center bg-white p-4 rounded-lg shadow-sm flex-grow hover:shadow-lg transition-shadow duration-300 ease-in-out'>
                         <Link to="/portal" className='flex-shrink-0'>
                             <div className='w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center'>

@@ -9,11 +9,11 @@ const infoPagosCardProps = [
     },
     {
         cardTitle: "Pagos y Facturas",
-        cardBody: "Sección para vizualizar facturas, realizar pagos y descargar comprobantes accediendo al portal y hacer click en Mis Comprobantes."
+        cardBody: "Sección para vizualizar, descargar y abonar tus facturas. 1- Hace click en Mis Comprobantes. 2- Selecciona 'Ver' para descargar y 'pagar' para abonar la misma. 3- Hace click en el botón de SIRO y elegí el medio de pago que mas te guste."
     },
     {
         cardTitle: "Reclamos y Feedback",
-        cardBody: "Herramienta para reclamos, sugerencias o calificá los servicios recibidos."
+        cardBody: "Gestiona tus reclamos de forma directa y rapida. 1- Hace click en soporte técnico. 2- Selecciona 'nuevo ticket - soporte técnico'. 3- Hace click en la barra de abajo de 'asunto' y selecciona tu inconveniente. "
     }
 ]
 
@@ -28,7 +28,8 @@ const InfoPagos = () => {
             Portal de Autogestión
         </h1>
         <div className="flex flex-wrap justify-center gap-6">
-            <InfoPagosCard {...infoPagosCardProps[0]}></InfoPagosCard>
+            {/* el cliente pidio que se elimine accesos y servicios */}
+            {/* <InfoPagosCard {...infoPagosCardProps[0]}></InfoPagosCard> */} 
             <InfoPagosCard {...infoPagosCardProps[1]}></InfoPagosCard>
             <InfoPagosCard {...infoPagosCardProps[2]}></InfoPagosCard>
         </div>

@@ -17,9 +17,8 @@ const Header = () => {
             <h1 className="title">¡INTERNET EN TODAS PARTES!</h1>
             <div className="flex justify-center items-center">
               <p className="description">
-                Explora la libertad de navegar sin límites con Conectate WiFi.
-                Descubre conexiones de alta calidad y servicios confiables desde{' '}
-                <strong>Santiago del Estero Hasta Catamarca</strong>.
+              Explora la libertad de navegar sin límites con Conectate Group. Descubre conexiones de alta velocidad y servicios confiables desde
+              <strong>Tucumán Hasta Catamarca</strong>.
               </p>
             </div>
             <div className="buttonContainer">

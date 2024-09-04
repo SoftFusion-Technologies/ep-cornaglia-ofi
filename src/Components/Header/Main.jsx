@@ -17,13 +17,14 @@ const Main = () => {
           última tecnología para garantizarte la mejor experiencia en internet.
         </p>
       </div>
-      <div className="md:w-1/2 w-full flex justify-center md:justify-end mb-8 md:mb-0">
-        <img
-          src={FotoPerson}
-          alt="Conectate WiFi"
-          className="max-w-full h-auto rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-        />
-      </div>
+     <div className="md:w-1/2 w-full flex justify-center md:justify-end mb-8 md:mb-0 md:mr-28">
+      <img
+        src={FotoPerson}
+        alt="Conectate WiFi"
+    className="max-w-full h-auto rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl max-h-80 md:max-h-96"
+      />
+    </div>
+
     </div>
   );
 };
