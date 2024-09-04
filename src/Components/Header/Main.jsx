@@ -21,7 +21,7 @@ const Main = () => {
       <img
         src={FotoPerson}
         alt="Conectate WiFi"
-    className="max-w-full h-auto rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl max-h-80 md:max-h-96"
+        className="max-w-full h-auto rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl max-h-80 md:max-h-96"
       />
     </div>
 

@@ -1,18 +1,26 @@
-import React from 'react'
+import React from 'react';
 import ProductCard from '../custom/ProductCard';
-import joker1 from '../Images/HBO/Joker1.webp';
-import darknigth2 from '../Images/HBO/darkNigth2.webp';
-import inception3 from '../Images/HBO/inception3.webp';
-import elPadrino4 from '../Images/HBO/elPadrino.webp';
-import wonder5 from '../Images/HBO/wonderWoman5.webp';
-import little6 from '../Images/HBO/little6.webp';
 import grilla from '../Images/grilla.webp';
 
-// import '../styles/benefits.css';
+// HBO 
+import joker1 from '../Images/HBO/Joker1.webp';
+import wonder5 from '../Images/HBO/wonderWoman5.webp';
+import little6 from '../Images/HBO/little6.webp';
+
+// FUTBOL 
+import messi1 from '../Images/Futbol/messiarg.webp';
+import futarg from '../Images/Futbol/imgFut2.webp';
+import messi3 from '../Images/Futbol/imgMessi3.webp';
+
+// PARAMOUNT 
+import paramount1 from '../Images/Paramount/topgun.webp';
+import paramount2 from '../Images/Paramount/Aquiet.webp';
+import paramount3 from '../Images/Paramount/Fallout3.webp';
+
+import ProductCardSlider from './ProductCardSlider';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 
 AOS.init();
 
@@ -33,39 +41,52 @@ const HBOImages = () => {
           CANALES DISPONIBLES
         </p>
 
-            {/* Imagen centrada */}
-          <div className="flex justify-center my-8">
-            <img src={grilla} alt="Descripción de la imagen" className="max-w-full h-auto" />
+        {/* Imagen centrada */}
+        <div className="flex justify-center my-8">
+          <img src={grilla} alt="Descripción de la imagen" className="max-w-full h-auto" />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-md">
+              <ProductCardSlider
+                title="FÚTBOL"
+                images={[
+                  { src: messi1, alt: 'Argentina Messi' },
+                  { src: futarg, alt: 'Boca river' },
+                  { src: messi3, alt: 'Messi 3' },
+                ]}
+              />
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
-              <div className="col-span-1 flex flex-col items-center img-hover-zoom" data-aos="zoom-in">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">FÚTBOL</h2>
-                <ProductCard
-                  image={joker1}
-                  title="The Joker"
-                  description="La historia de origen del villano más icónico de Gotham, explorando cómo Arthur Fleck se convierte en el Joker."
-                />
-              </div>
-              <div className="col-span-1 flex flex-col items-center img-hover-zoom" data-aos="zoom-in">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">HBO</h2>
-                <ProductCard
-                  image={darknigth2}
-                  title="El Caballero de la noche"
-                  description="Una batalla épica entre el bien y el mal, donde el implacable Joker pone a prueba los límites de Batman en una lucha por el alma de Gotham."
-                />
-              </div>
-              <div className="col-span-1 flex flex-col items-center img-hover-zoom" data-aos="zoom-in">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-4">PARAMOUNT</h2>
-                <ProductCard
-                  image={inception3}
-                  title="Inception"
-                  description="Un viaje a lo más profundo de la mente humana en una historia de ciencia ficción tan fascinante como compleja."
-                />
-              </div>
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-md">
+              <ProductCardSlider
+                title="HBO"
+                images={[
+                  { src: joker1, alt: 'The Joker' },
+                  { src: wonder5, alt: 'Mujer Maravilla' },
+                  { src: little6, alt: 'Mujercitas' },
+                ]}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-md">
+              <ProductCardSlider
+                title="PARAMOUNT"
+                images={[
+                  { src: paramount1, alt: 'paramount1' },
+                  { src: paramount2, alt: 'paramount2' },
+                  { src: paramount3, alt: 'paramount3' },
+                ]}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default HBOImages
+export default HBOImages;

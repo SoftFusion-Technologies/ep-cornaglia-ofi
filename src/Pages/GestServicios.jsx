@@ -24,7 +24,7 @@ const GestServicios = () => {
                 <ul className='space-y-4 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6 w-full'>
                     <div className='flex items-center bg-white p-4 rounded-lg shadow-sm flex-grow hover:shadow-lg transition-shadow duration-300 ease-in-out'>
                     <a
-                        href="https://api.whatsapp.com/send?phone=5493865266909&text=Hola%20quiero%20modificar%20mi%20plan,%20mi%20servicio%20está%20a%20nombre%20de:%20(completar)"
+                        href="https://api.whatsapp.com/send?phone=5493865219096&text=Hola%20quiero%20modificar%20mi%20plan,%20mi%20servicio%20está%20a%20nombre%20de:%20(completar)"
                         target="_blank"
                         rel="noopener noreferrer"
                         className='flex-shrink-0'
@@ -34,7 +34,7 @@ const GestServicios = () => {
                         </div>
                     </a>
                     <a
-                        href="https://api.whatsapp.com/send?phone=5493865266909&text=Hola%20quiero%20modificar%20mi%20plan,%20mi%20servicio%20está%20a%20nombre%20de:%20(completar)"
+                        href="https://api.whatsapp.com/send?phone=5493865219096&text=Hola%20quiero%20modificar%20mi%20plan,%20mi%20servicio%20está%20a%20nombre%20de:%20(completar)"
                         target="_blank"
                         rel="noopener noreferrer"
                         className='ml-4'
