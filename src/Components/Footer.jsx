@@ -1,8 +1,25 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../Styles/Footer.css"
-import { FaFacebook, FaInstagram, FaTwitter} from "react-icons/fa"
-import { FaArrowUp } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaArrowUp} from "react-icons/fa"
+import PropTypes from 'prop-types';
+
+
+const WhatsAppLink = ({ number }) => (
+  <a
+      href={`https://wa.me/${number.replace(/\D/g, '')}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center"
+  >
+      Ir al WhatsApp
+  </a>
+);
+
+WhatsAppLink.propTypes = {
+  number: PropTypes.string.isRequired,
+};
+
 
 const Footer = () => {
     useEffect(() => {
@@ -110,11 +127,8 @@ const Footer = () => {
         <li>
           <h2>Contáctanos</h2>
           <ul className="box">
-            {/* <li>
-              <Link to="#">3865 111111</Link>
-            </li> */}
             <li>
-              <Link to="#">Ir al WhatsApp</Link>
+              <WhatsAppLink number="+5493865266909" />
             </li>
             <li>
               <Link to="#">Ver Ubicación</Link>

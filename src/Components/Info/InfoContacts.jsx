@@ -142,9 +142,23 @@ const InfoContacts = () => {
             <h2 className='text-2xl font-bold text-gray-800'>Los Altos</h2>
             <div className="mb-4">
             <p className="text-gray-600"><strong>Dirección:</strong> Av. San Martín  270</p>
-            <p className="text-gray-600"><strong>Horarios de Atención:</strong> Lun a Vie 08:00 a 13:00 / 17:00 a 21:00 - Sabados 08:00 a 13:00</p>
-            <p className="text-gray-600"><strong>Teléfono:</strong>+54 9 3834 92-6725</p>
-              </div>
+            <div className="text-gray-600 mt-2">
+
+                <div className="flex flex-wrap items-center mt-1">
+                <strong className="mr-1">Horarios de Atención:</strong>
+                    <span className="inline-block mr-2"> Lun a Vie 08:00 a 13:00 / 17:00 a 21:00 </span>
+                    <span className="inline-block">Sábados: 08:30 a 13:00</span>
+                </div>
+            </div>
+            <div className="flex items-center mt-2">
+                <strong className="text-gray-600 mr-2">Teléfono:</strong>
+                <span className="flex items-center">
+                    <a href="tel:3834926725" className="flex items-center text-gray-600">
+                        <FaPhoneAlt className="w-5 h-5 text-gray-500 mr-2" /> 383-4926725
+                    </a>
+                </span>
+            </div>
+            </div>
 
         </div>
     </div>
