@@ -11,35 +11,42 @@ const PricingCard = ({
   mainFeature = "Servicio de hasta MB + 164 de canales",
   channels = "+ 164 de canales",
   featuresList = [
-    "Soporte técnico de lunes a viernes para ambos servicios",
+    "Soporte técnico las 24 horas, los 7 días de la semana",
     "Canales locales",
     "Sin mínimo de permanencia",
-    "2 meses de pack adicional sin cargo"
+    "adicional sin cargo"
   ],
+  lastFeature = "Adicional",
   isMostPopular = false,
   consult = "Consultar vigencia mensual de los pack sin cargo",
+  zone = false,
+  zoneConsult = "CONSULTAR ZONA DISPONIBLE",
 }) => {
+  function Month(props) {
+    if (!props) return month
+  }
+  const month = <span className='text-xl'>/MES</span>
   return (
     <div
-      className={`m-4 h-auto transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl bg-gray-50 border border-gray-100 border-opacity-10 rounded-lg
+      className={`m-2 h-auto transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl bg-gray-50 border border-gray-100 border-opacity-10 rounded-lg
             shadow-xl my-8 max-w-80 ${isMostPopular
           ? 'scale-105 transform z-10 bg-gray-200 m-5'
           : 'scale-95 transform'
         }`}
     >
       <div className="text-3xl font-semibold text-center">
-        <h1 className="py-4 text-5xl ">{plan}</h1>
-        <h2 className="pb-4 text-gray-700 text-4xl">{price}<span className='text-xl'>/MES</span></h2>
+        <h1 className="py-4 text-5xl ">{plan} </h1>
+        <h2 className= {`pb-4 text-gray-700 ${zone ? 'text-xl leading-10' : 'text-4xl'}` } >{zone ? zoneConsult : price}{Month(zone)}</h2>
       </div>
-      <div className="text-lg bg-gray-100 border-gray-200 border-opacity-10 rounded-lg shadow-xl py-4">
+      <div className="text-lg bg-gray-100 border-gray-200 border-opacity-10 rounded-lg shadow-xl py-4 ">
 
         <ul>
           <li className="p-2 font-bold">{mainFeature} <br></br>{channels}</li>
-          <li className="p-2">{featuresList[0]}</li>
+          <li className="p-2 pr-6">{featuresList[0]}</li>
           <li className="p-2">{featuresList[1]}</li>
           <li className="p-2">{featuresList[2]}</li>
-          <li className="p-2">{featuresList[3]}</li>
-          <li className="p-2 text-xs text-center">{consult}</li>
+          <li className="p-2 pr-6">{lastFeature}<br></br>{featuresList[3]}</li>
+          <li className="p-2 text-xs text-center pt-6">{consult}</li>
         </ul>
         <div className="flex justify-center items-center">
           <a href="https://wa.me/5493865266909?text=%C2%A1Hola!%20me%20gustar%C3%ADa%20preguntarte%20acerca%20del%20mejor%20servicio%20para%20m%C3%AD."
@@ -59,7 +66,7 @@ const PricingCard = ({
           </a>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

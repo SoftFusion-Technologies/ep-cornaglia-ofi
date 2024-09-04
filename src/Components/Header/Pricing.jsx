@@ -7,6 +7,7 @@ const plans = [
         price: "$25.000",
         
         mainFeature: "Servicio de hasta 30 MB",
+        lastFeature: "2 meses de Paramount,",
 
         isMostPopular: false,
     },
@@ -15,24 +16,27 @@ const plans = [
         price: "$25.700",
 
         mainFeature: "Servicio de hasta 50 MB",
-        
-        isMostPopular: true,
+        lastFeature: "2 meses de HBO + Paramount,",
+
+        isMostPopular: false,
     },
     {
         plan: "100 MB + TV",
         price: "$27.200",
         
         mainFeature: "Servicio de hasta 100 MB",
+        lastFeature: "2 meses de Fútbol + HBO,",
 
-        isMostPopular: true,
+        isMostPopular: false,
     },
     {
         plan: "300 MB + TV",
-        price: "$30.000",
         
         mainFeature: "Servicio de hasta 300 MB",
+        lastFeature: "2 meses de Fútbol + HBO,",
 
         isMostPopular: false,
+        zone: true
     }
 ]
 
@@ -52,7 +56,7 @@ const Pricing = () => {
         </div>
         <div
           data-aos="zoom-in"
-          className="flex flex-wrap items-center justify-center max-w-5xl m-auto"
+          className="flex flex-wrap items-center justify-center md:max-w-screen-md xl:max-w-screen-2xl m-auto "
         >
           <PricingCard {...plans[0]}></PricingCard>
           <PricingCard {...plans[1]}></PricingCard>
