@@ -10,6 +10,8 @@ import MiPortal from './Pages/MiPortal';
 import InfoPagos from './Components/Info/InfoPagos';
 import WelcomeModal from './Components/WelcomeModal';
 import welcomeImage from '../src/Images/imgWelcome.png';
+import WhatsappBut from './Components/WhatsappBut';
+
 import { useState } from 'react';
 const App = () => {
 
@@ -31,6 +33,7 @@ const App = () => {
         <Route path="/*" element={<NotFound></NotFound>} />
       </Routes>
       <Separator />
+      <WhatsappBut />
       <Footer />
     </Router>
   );
