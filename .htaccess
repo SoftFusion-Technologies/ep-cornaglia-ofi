@@ -1,7 +1,9 @@
 # Habilitar el módulo de reescritura
 RewriteEngine On
 
-# Redirigir todas las solicitudes a index.html
+# Evitar que las solicitudes a archivos existentes (como JS, CSS, imágenes) sean redirigidas
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todas las demás solicitudes a index.html
 RewriteRule ^ index.html [L]
