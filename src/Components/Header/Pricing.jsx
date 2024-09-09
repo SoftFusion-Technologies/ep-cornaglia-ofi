@@ -49,7 +49,7 @@ const Pricing = () => {
           <h1 className="text-center text-5xl my-8 font-semibold">
             Planes y Servicios
           </h1>
-          <p className="text-center text-xl semibold mb-4">
+          <p className="text-center text-xl semibold mb-4 px-4">
             Conoce nuestros planes diseñados para satisfacer las diferentes
             necesidades de velocidad y uso, sea en la ciudad o sus aledaños.
           </p>
