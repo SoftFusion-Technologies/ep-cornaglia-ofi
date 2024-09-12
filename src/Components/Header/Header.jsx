@@ -18,7 +18,7 @@ const Header = () => {
             <div className="flex justify-center items-center">
               <p className="description">
               Explora la libertad de navegar sin límites con Conectate Group. Descubre conexiones de alta velocidad y servicios confiables desde
-              <strong>Tucumán Hasta Catamarca</strong>.
+              <strong> Tucumán Hasta Catamarca</strong>.
               </p>
             </div>
             <div className="buttonContainer">

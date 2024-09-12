@@ -24,7 +24,8 @@ const App = () => {
   return (
     <Router>
       <WelcomeModal imageUrl={welcomeImage}  />
-      <AnimCursor />
+      {/* Se elimina el cursor animado por pedido del cliente */}
+      {/* <AnimCursor /> */}
       <Nav />
       <Routes>
         <Route path="/" element={<Home></Home>} />
