@@ -71,23 +71,22 @@ const Nav = () => {
             <ul className="hidden md:flex space-x-10">
               <li>
                 <Link to="/">
-                <button
-                  onClick={scrollInicio}
-                  className={`text-2xl font-bold ${
-                    location.pathname === '/'
-                      ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                  }`}
-                  style={{
-                    paddingBottom: '10px'
-                  }}
-                >
-                  INICIO
+                  <button
+                    onClick={scrollInicio}
+                    className={`text-2xl font-bold ${
+                      location.pathname === '/'
+                        ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                        : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    }`}
+                    style={{
+                      paddingBottom: '10px'
+                    }}
+                  >
+                    INICIO
                   </button>
                 </Link>
-                  
               </li>
-  
+
               <li>
                 <Link
                   // to="/gestion"
@@ -101,10 +100,10 @@ const Nav = () => {
                     paddingBottom: '10px'
                   }}
                 >
-                  GESTIÓN
+                  MI SERVICIO
                 </Link>
               </li>
-                <li>
+              <li>
                 <button
                   onClick={scrollPlanes}
                   className={`text-2xl font-bold ${
@@ -137,7 +136,7 @@ const Nav = () => {
                   TV
                 </button>
               </li>
-              
+
               <li>
                 <button
                   onClick={scrollContact}
@@ -214,16 +213,16 @@ const Nav = () => {
                 INICIO
               </button>
             </li>
-          <li>
+            <li>
               <button
                 onClick={scrollGestion}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
               >
-                GESTION
+                MI SERVICIO
               </button>
             </li>
 
-               <li>
+            <li>
               <button
                 onClick={scrollPlanes}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
@@ -239,7 +238,7 @@ const Nav = () => {
                 TV
               </button>
             </li>
-           <li>
+            <li>
               <button
                 onClick={scrollContact}
                 className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
@@ -247,7 +246,6 @@ const Nav = () => {
                 CONTACTO
               </button>
             </li>
-        
           </ul>
         </div>
       </nav>

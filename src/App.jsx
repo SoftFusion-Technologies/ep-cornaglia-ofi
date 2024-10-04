@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <Router>
-      <WelcomeModal imageUrl={welcomeImage}  />
+      {/* <WelcomeModal imageUrl={welcomeImage}  /> */}
       {/* Se elimina el cursor animado por pedido del cliente */}
       {/* <AnimCursor /> */}
       <Nav />
