@@ -45,7 +45,7 @@ const Pricing = () => {
       <div
         id="planes"
       >
-        <div className="mt-10 max-w-xl m-auto" data-aos="zoom-in">
+        <div className="mt-10 max-w-xs w-full m-auto" data-aos="zoom-in">
           <h1 className="text-center text-5xl my-8 font-semibold">
             Planes y Servicios
           </h1>

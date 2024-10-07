@@ -10,7 +10,7 @@ const WhatsAppLink = ({ number }) => (
       href={`https://wa.me/${number.replace(/\D/g, '')}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center"
+      className="items-center"
   >
       Ir al WhatsApp
   </a>

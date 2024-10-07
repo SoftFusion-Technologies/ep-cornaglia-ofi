@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="main-container">
+    <div id="contact" className="main-container max-w-full overflow-hidden">
       <div className="containerForm">
         <div className="text">CONTACTO</div>
         <form onSubmit={handleSubmit}>

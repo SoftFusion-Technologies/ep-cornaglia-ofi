@@ -26,7 +26,7 @@ AOS.init();
 
 const HBOImages = () => {
   return (
-    <div id="peliculas" className="py-16 bg-shellSilver">
+    <div id="peliculas" className="py-16 bg-shellSilver max-w-full overflow-hidden">
       <div className="container mx-auto px-5">
         <h1
           className="text-center text-5xl font-bold text-gray-800"
@@ -46,7 +46,7 @@ const HBOImages = () => {
           <img src={grilla} alt="Descripción de la imagen" className="max-w-full h-auto" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-10 overflow-hidden">
           <div className="flex flex-col items-center">
             <div className="w-full max-w-md">
               <ProductCardSlider

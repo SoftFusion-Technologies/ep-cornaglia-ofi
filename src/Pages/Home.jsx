@@ -18,9 +18,9 @@ const Home = () => {
       <CardSection></CardSection>
       <Main></Main>
       <GestServicios></GestServicios>
-      <InfoContacts></InfoContacts>
-      <Pricing></Pricing>
-      <HBOImages/>
+      <InfoContacts></InfoContacts> 
+      <Pricing></Pricing> 
+      <HBOImages/> 
       <Contact></Contact>
     </div>
   );
