@@ -4,7 +4,7 @@ import PricingCard from "../Cards/PricingCard";
 const plans = [
     {
         plan: "30 MB + TV",
-        price: "$25.000",
+        price: "$28.000",
         
         mainFeature: "Servicio de hasta 30 MB",
         lastFeature: "2 meses de Paramount,",
@@ -13,7 +13,7 @@ const plans = [
     },
     {
         plan: "50 MB + TV",
-        price: "$25.700",
+        price: "$28.700",
 
         mainFeature: "Servicio de hasta 50 MB",
         lastFeature: "2 meses de HBO + Paramount,",
@@ -22,7 +22,7 @@ const plans = [
     },
     {
         plan: "100 MB + TV",
-        price: "$27.200",
+        price: "$30.200",
         
         mainFeature: "Servicio de hasta 100 MB",
         lastFeature: "2 meses de Fútbol + HBO,",
