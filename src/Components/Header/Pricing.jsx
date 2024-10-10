@@ -6,8 +6,8 @@ const plans = [
         plan: "30 MB + TV",
         price: "$28.000",
         
-        mainFeature: "Servicio de hasta 30 MB",
-        lastFeature: "2 meses de Paramount,",
+        // mainFeature: "Servicio de hasta 30 MB",
+        // lastFeature: "2 meses de Paramount,",
 
         isMostPopular: false,
     },
@@ -15,8 +15,8 @@ const plans = [
         plan: "50 MB + TV",
         price: "$28.700",
 
-        mainFeature: "Servicio de hasta 50 MB",
-        lastFeature: "2 meses de HBO + Paramount,",
+        // mainFeature: "Servicio de hasta 50 MB",
+        // lastFeature: "2 meses de HBO + Paramount,",
 
         isMostPopular: false,
     },
@@ -24,16 +24,16 @@ const plans = [
         plan: "100 MB + TV",
         price: "$30.200",
         
-        mainFeature: "Servicio de hasta 100 MB",
-        lastFeature: "2 meses de Fútbol + HBO,",
+        // mainFeature: "Servicio de hasta 100 MB",
+        // lastFeature: "2 meses de Fútbol + HBO,",
 
         isMostPopular: false,
     },
     {
         plan: "300 MB + TV",
         
-        mainFeature: "Servicio de hasta 300 MB",
-        lastFeature: "2 meses de Fútbol + HBO,",
+        // mainFeature: "Servicio de hasta 300 MB",
+        // lastFeature: "2 meses de Fútbol + HBO,",
 
         isMostPopular: false,
         zone: true

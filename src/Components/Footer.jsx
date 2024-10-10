@@ -76,7 +76,10 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link to="https://www.instagram.com/conectate.group/" target='_blank'>
+            <Link
+              to="https://www.instagram.com/conectate.group/"
+              target="_blank"
+            >
               <FaInstagram />
             </Link>
           </li>
@@ -140,12 +143,14 @@ const Footer = () => {
         </li>
       </ul>
       <div className="footer-bottom">
+        <span>Este sitio web esta desarrollado por SoftFusion</span><br></br>
         <span>
           <a href="https://softfusion.com.ar/" target="_blank">
-            © 2023 SoftFusion. All rights reserved.
+            © 2025 SoftFusion. All rights reserved.
           </a>
         </span>
         <span>Terms · Privacy Policy</span>
+        <br></br>
       </div>
       <button
         className="fixed bottom-10 right-10 bg-black text-white p-2 rounded-full shadow-md hover:shadow-lg transition duration-300"
