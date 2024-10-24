@@ -27,10 +27,10 @@ const InfoPagos = () => {
   }, []);
   return (
     <>
-      <h1 className="text-5xl text-center my-12 mt-28 uppercase">
+      <h1 className="text-5xl text-center my-12 mt-32 uppercase font-sans">
         Bienvenidos
       </h1>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center -mt-8">
         {/* el cliente pidio que se elimine accesos y servicios */}
         {/* <InfoPagosCard {...infoPagosCardProps[0]}></InfoPagosCard> */}
         {/* <InfoPagosCard {...infoPagosCardProps[1]}></InfoPagosCard>
@@ -38,7 +38,7 @@ const InfoPagos = () => {
 
         <img
           src={ImgInfoPagos}
-          className="w-full max-w-md h-auto"
+          className="w-full max-w-md h-auto mb-2"
           alt="Info Pagos"
         />
       </div>
