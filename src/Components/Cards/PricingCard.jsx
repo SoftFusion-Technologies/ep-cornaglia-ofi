@@ -13,10 +13,9 @@ const PricingCard = ({
   featuresList = [
     "Soporte técnico las 24 horas, los 7 días de la semana",
     "Canales locales",
-    "Sin mínimo de permanencia",
-    "adicional sin cargo"
+    "Sin mínimo de permanencia"
   ],
-  lastFeature = "Adicional",
+  lastFeature = "Adicional sin cargo",
   isMostPopular = false,
   consult = "Consultar vigencia mensual de los pack sin cargo",
   zone = false,
