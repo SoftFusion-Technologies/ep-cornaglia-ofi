@@ -4,24 +4,25 @@ import '../Styles/WelcomeModal.css';
 const WelcomeModal = ({ imageUrl }) => {
   const [isVisible, setIsVisible] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 5000); // 5 segundos
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleClose = () => {
     setIsVisible(false);
   };
 
-  useEffect(() => {
-     const timer = setTimeout(() => {
-       setIsVisible(false);
-     }, 5000); // 5 segundos
-
-     return () => clearTimeout(timer);
-  }, []);
-
+  
   if (!isVisible) {
     return null;
   }
 
   return (
-      <div className="welcome-modal_V2">
+    <div className="welcome-modal_V2">
       <div className="modal-content_V2">
         <button className="close-button_V2" onClick={handleClose}>
           &times;

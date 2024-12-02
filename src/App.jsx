@@ -13,17 +13,27 @@ import WelcomeModal from './Components/WelcomeModal';
 import welcomeImage from '../src/Images/imgWelcome.png';
 import WhatsappBut from './Components/WhatsappBut';
 
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [showModal, setShowModal] = useState(false); // Controla la visibilidad del modal
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
 
+  useEffect(() => {
+    // Mostrar el modal después de 3 segundos
+    const timer = setTimeout(() => {
+      setShowModal(true);
+    }, 2000);
+
+    return () => clearTimeout(timer); // Limpieza del temporizador
+  }, []);
+
   return (
     <Router>
-       <WelcomeModal imageUrl={welcomeImage} />
+      {showModal && <WelcomeModal imageUrl={welcomeImage} />}
       {/* Se elimina el cursor animado por pedido del cliente */}
       {/* <AnimCursor /> */}
       <Nav />
