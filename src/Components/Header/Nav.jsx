@@ -74,7 +74,7 @@ const Nav = () => {
                   <button
                     onClick={scrollInicio}
                     className={`text-2xl font-bold ${
-                      location.pathname === '/'
+                      location.pathname === '/a'
                         ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
                         : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
                     }`}
