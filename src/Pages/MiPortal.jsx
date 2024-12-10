@@ -8,10 +8,8 @@ const MiPortal = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = `Hola, me gustaría gestionar mi cuenta para el Portal.\nNombre completo: (completar)\nDNI: (completar)`;
-    const url = `https://wa.me/+5493865239239?text=${encodeURIComponent(
-      message
-    )}`;
+    // const message = `Hola, me gustaría gestionar mi cuenta para el Portal.\nNombre completo: (completar)\nDNI: (completar)`;
+    const url = 'https://wa.me/+5493865239239';
 
     window.open(url, '_blank');
   };
