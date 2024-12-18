@@ -43,9 +43,9 @@ const Header = () => {
       <div className="headerContent">
         <div className="w-full text-center text-white pt-10 lg:pt-32">
           {/* Título con animación de tipeado y borrado */}
-          <h1 className="title text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="title text-2xl md:text-6xl font-bold mb-6 whitespace-nowrap overflow-hidden">
             {typedText}
-            <span className="text-red-500 blinking-cursor">|</span>{' '}
+            <span className="text-red-500 blinking-cursor">|</span>
           </h1>
           {/* Descripción con animación */}
           <div className="flex justify-center items-center">
