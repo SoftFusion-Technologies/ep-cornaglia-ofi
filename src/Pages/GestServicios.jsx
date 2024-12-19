@@ -42,11 +42,28 @@ const GestServicios = () => {
                 className="ml-4"
               >
                 <div>
-                  <p className="text-lg font-medium">Mejorar mi plan</p>
+                  <p className="text-lg font-medium">Servicio Administrativo</p>
                 </div>
               </a>
             </div>
 
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-sm flex-grow hover:shadow-lg transition-shadow duration-300 ease-in-out">
+              <Link to="/autogestion" className="flex-shrink-0">
+                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
+                  {<FaHeadset size="2em" />}
+                </div>
+              </Link>
+              <Link
+                to="#"
+                onClick={() =>
+                  window.open('https://wa.me/3865239239?text=Hola', '_blank')
+                }
+              >
+                <div className="ml-4">
+                  <p className="text-lg font-medium">Servicio técnico</p>
+                </div>
+              </Link>
+            </div>
             <div className="flex items-center bg-white p-4 rounded-lg shadow-sm flex-grow hover:shadow-lg transition-shadow duration-300 ease-in-out">
               <Link to="/portal" className="flex-shrink-0">
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
@@ -56,18 +73,6 @@ const GestServicios = () => {
               <div onClick={handleClick} className="ml-4 cursor-pointer">
                 <p className="text-lg font-medium">Mis facturas</p>
               </div>
-            </div>
-            <div className="flex items-center bg-white p-4 rounded-lg shadow-sm flex-grow hover:shadow-lg transition-shadow duration-300 ease-in-out">
-              <Link to="/autogestion" className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
-                  {<FaHeadset size="2em" />}
-                </div>
-              </Link>
-              <Link to="/autogestion">
-                <div className="ml-4">
-                  <p className="text-lg font-medium">Asistencia Técnica</p>
-                </div>
-              </Link>
             </div>
           </ul>
         </div>
