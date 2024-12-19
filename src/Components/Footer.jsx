@@ -52,12 +52,14 @@ const Footer = () => {
       observer.disconnect();
     };
   }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
+
   return (
     <footer className="footer">
       <div className="footer-left">
@@ -69,22 +71,31 @@ const Footer = () => {
         </p>
         <div className="socials">
           <li>
-            <Link to="#">
+            <a
+              href="https://softfusion.com.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebook />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="https://www.instagram.com/conectate.group/"
+            <a
+              href="https://www.instagram.com/conectate.group/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="#">
+            <a
+              href="https://softfusion.com.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter />
-            </Link>
+            </a>
           </li>
         </div>
       </div>
@@ -93,16 +104,40 @@ const Footer = () => {
           <h2>Documentos</h2>
           <ul className="box">
             <li>
-              <Link to="#">Planes</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Planes
+              </a>
             </li>
             <li>
-              <Link to="#">Paginas Legales</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Paginas Legales
+              </a>
             </li>
             <li>
-              <Link to="#">Documentos IFT</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Documentos IFT
+              </a>
             </li>
             <li>
-              <Link to="#">Documentos PROFECO</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Documentos PROFECO
+              </a>
             </li>
           </ul>
         </li>
@@ -111,16 +146,40 @@ const Footer = () => {
           <h2>Otros Enlaces</h2>
           <ul className="box">
             <li>
-              <Link to="#">Test de Velocidad</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Test de Velocidad
+              </a>
             </li>
             <li>
-              <Link to="#">Ver Cobertura</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver Cobertura
+              </a>
             </li>
             <li>
-              <Link to="#">Otros Servicios</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Otros Servicios
+              </a>
             </li>
             <li>
-              <Link to="#">Ver Planes y Precios</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver Planes y Precios
+              </a>
             </li>
           </ul>
         </li>
@@ -132,24 +191,40 @@ const Footer = () => {
               <WhatsAppLink number="+5493865266909" />
             </li>
             <li>
-              <Link to="#">Ver Ubicación</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver Ubicación
+              </a>
             </li>
             <li>
-              <Link to="#">Sitio Web Lento?</Link>
+              <a
+                href="https://softfusion.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sitio Web Lento?
+              </a>
             </li>
           </ul>
         </li>
       </ul>
       <div className="footer-bottom">
         <span>Este sitio web esta desarrollado por SoftFusion</span>
-        <br></br>
+        <br />
         <span>
-          <a href="https://softfusion.com.ar/" target="_blank">
+          <a
+            href="https://softfusion.com.ar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             © 2025 SoftFusion. All rights reserved.
           </a>
         </span>
         <span>Terms · Privacy Policy</span>
-        <br></br>
+        <br />
       </div>
       <button
         className="fixed bottom-10 right-10 bg-black text-white p-2 rounded-full shadow-md hover:shadow-lg transition duration-300"
