@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import whatsappIcon from '../Images/LogoRosaBN.svg'; // Asegúrate de que la ruta de la imagen sea correcta
 import { FaRobot } from 'react-icons/fa'; // Vamos a usar el ícono de robot de react-icons
 import ChatBot from './Info/ChatBot'; // Asegúrate de tener el componente ChatBot creado previamente
 
 function WhatsappBut() {
   const [isModalOpen, setIsModalOpen] = useState(false); // Estado para abrir/cerrar el modal
+  // Estado para controlar la visibilidad del mensaje
+  const [showMessage, setShowMessage] = useState(false);
+
+  useEffect(() => {
+    // Mostrar el mensaje después de 1 segundo
+    const timer = setTimeout(() => {
+      setShowMessage(true);
+    }, 4000);
+
+    // Limpiar el temporizador al desmontar
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleRobotClick = (e) => {
     e.preventDefault();
@@ -23,8 +35,19 @@ function WhatsappBut() {
   return (
     <div className="fixed bottom-20 right-7 z-50">
       {/* Icono de Robot */}
-      <div className="mb-2 cursor-pointer" onClick={handleRobotClick}>
-        <FaRobot className="w-12 h-12 text-blue-500 animate-bounce" />
+      <div className="relative">
+        {/* Ícono del bot */}
+        <div className="ml-1 mb-2 cursor-pointer" onClick={handleRobotClick}>
+          <FaRobot className="w-12 h-12 text-red-500 animate-bounce hover:scale-110 transition-transform" />
+        </div>
+
+        {/* Mensaje emergente con estilo de globo de chat */}
+        {showMessage && (
+          <div className="absolute bottom-2 left-0 transform -translate-x-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-sm font-medium rounded-xl shadow-lg px-6 py-3 animate-fade-in">
+            <span className="absolute bottom-3 right-[-8px] w-0 h-0 border-l-8 border-l-transparent border-t-8 border-t-pink-500 border-r-8 border-r-transparent"></span>
+            <p>¡Hola!, soy el bot. Presióname para resolver tus dudas.</p>
+          </div>
+        )}
       </div>
 
       {/* Icono de WhatsApp */}

@@ -1,8 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const ChatBot = ({ closeModal }) => {
-  // Estado para almacenar el historial de mensajes
-  const [chatHistory, setChatHistory] = useState([]);
+  // Estado para almacenar el historial de mensajes, incluye mensaje de bienvenida
+  const [chatHistory, setChatHistory] = useState([
+    {
+      sender: 'bot',
+      message:
+        '¡Hola! Bienvenido al bot de Conectate Group. Estoy aquí para ayudarte con tus preguntas sobre nuestro servicio. Selecciona una opción.'
+    }
+  ]);
+
+  // Referencia al contenedor del historial de mensajes
+  const chatContainerRef = useRef(null);
+
+  // Desplazamiento automático hacia el último mensaje
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
+    }
+  }, [chatHistory]);
 
   // Opciones de preguntas predefinidas
   const options = [
@@ -47,13 +64,16 @@ const ChatBot = ({ closeModal }) => {
         </button>
 
         <div className="mb-6 text-center">
-          <h1 className="text-3xl text-green-500 font-semibold">
+          <h1 className="text-3xl text-red-500 font-semibold">
             Soporte Automático
           </h1>
         </div>
 
         {/* Historial de conversación */}
-        <div className="h-64 overflow-y-auto mb-6 space-y-4">
+        <div
+          className="h-64 overflow-y-auto mb-6 space-y-4"
+          ref={chatContainerRef}
+        >
           {chatHistory.map((chat, index) => (
             <div
               key={index}
@@ -74,7 +94,7 @@ const ChatBot = ({ closeModal }) => {
             <button
               key={index}
               onClick={() => handleOptionClick(option)}
-              className="w-full px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all"
+              className="w-full px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all"
             >
               {option}
             </button>

@@ -1,59 +1,57 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import "../Styles/Footer.css"
-import { FaFacebook, FaInstagram, FaTwitter, FaArrowUp} from "react-icons/fa"
+import '../Styles/Footer.css';
+import { FaFacebook, FaInstagram, FaTwitter, FaArrowUp } from 'react-icons/fa';
 import PropTypes from 'prop-types';
-
 
 const WhatsAppLink = ({ number }) => (
   <a
-      href={`https://wa.me/${number.replace(/\D/g, '')}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="items-center"
+    href={`https://wa.me/${number.replace(/\D/g, '')}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="items-center"
   >
-      Ir al WhatsApp
+    Ir al WhatsApp
   </a>
 );
 
 WhatsAppLink.propTypes = {
-  number: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired
 };
 
-
 const Footer = () => {
-    useEffect(() => {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-          };
-      
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('appear');
-                // Dejar de observar una vez que se ha añadido la clase
-                observer.unobserve(entry.target);
-              }
-            });
-          }, observerOptions);
-      
-          // Seleccionar los elementos a observar
-          const footerLeft = document.querySelector('.footer-left');
-          const socials = document.querySelector('.socials');
-          const footerRightItems = document.querySelectorAll('.footer-right li');
-      
-          // Observar los elementos
-          observer.observe(footerLeft);
-          observer.observe(socials);
-          footerRightItems.forEach(item => observer.observe(item));
-      
-          // Limpieza del observer al desmontar el componente
-          return () => {
-            observer.disconnect();
-          };
-        }, []);
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          // Dejar de observar una vez que se ha añadido la clase
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Seleccionar los elementos a observar
+    const footerLeft = document.querySelector('.footer-left');
+    const socials = document.querySelector('.socials');
+    const footerRightItems = document.querySelectorAll('.footer-right li');
+
+    // Observar los elementos
+    observer.observe(footerLeft);
+    observer.observe(socials);
+    footerRightItems.forEach((item) => observer.observe(item));
+
+    // Limpieza del observer al desmontar el componente
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -143,7 +141,8 @@ const Footer = () => {
         </li>
       </ul>
       <div className="footer-bottom">
-        <span>Este sitio web esta desarrollado por SoftFusion</span><br></br>
+        <span>Este sitio web esta desarrollado por SoftFusion</span>
+        <br></br>
         <span>
           <a href="https://softfusion.com.ar/" target="_blank">
             © 2025 SoftFusion. All rights reserved.
@@ -160,6 +159,6 @@ const Footer = () => {
       </button>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;
