@@ -44,6 +44,15 @@ function WhatsappBut() {
         {/* Mensaje emergente con estilo de globo de chat */}
         {showMessage && (
           <div className="absolute bottom-2 left-0 transform -translate-x-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-sm font-medium rounded-xl shadow-lg px-6 py-3 animate-fade-in">
+            {/* Botón de cierre */}
+            <button
+              className="absolute top-1 right-2 text-white text-lg font-bold"
+              onClick={() => setShowMessage(false)}
+            >
+              &times;
+            </button>
+
+            {/* Texto del mensaje */}
             <span className="absolute bottom-3 right-[-8px] w-0 h-0 border-l-8 border-l-transparent border-t-8 border-t-pink-500 border-r-8 border-r-transparent"></span>
             <p>¡Hola!, soy el bot. Presióname para resolver tus dudas.</p>
           </div>
