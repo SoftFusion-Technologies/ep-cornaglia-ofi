@@ -36,7 +36,7 @@ const GestServicios = () => {
                 </div>
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=5493865219096&text=Hola"
+                href="https://api.whatsapp.com/send?phone=5493865239239&text=Hola"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-4"
