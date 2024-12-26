@@ -27,8 +27,8 @@ const InfoPagos = () => {
   }, []);
   return (
     <>
-      <h1 className="text-5xl text-center my-12 mt-32 uppercase font-sans">
-        Mis Facturas
+      <h1 className="text-5xl text-center my-12 mt-32 uppercase font-bold">
+        paso a paso
       </h1>
       <div className="flex justify-center items-center -mt-8">
         {/* el cliente pidio que se elimine accesos y servicios */}

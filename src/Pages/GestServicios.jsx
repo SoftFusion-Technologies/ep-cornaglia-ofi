@@ -71,7 +71,7 @@ const GestServicios = () => {
                 </div>
               </Link>
               <div onClick={handleClick} className="ml-4 cursor-pointer">
-                <p className="text-lg font-medium">Mis facturas</p>
+                <p className="text-lg font-medium">Pagos Electrónicos</p>
               </div>
             </div>
           </ul>
