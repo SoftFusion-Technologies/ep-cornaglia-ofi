@@ -25,7 +25,7 @@ const Promociones = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2 mt-32">
           ¡Conoce nuestras promociones!
         </h2>
         <p className="text-gray-600 text-lg md:text-xl mb-10">
@@ -35,7 +35,7 @@ const Promociones = () => {
       </motion.div>
 
       {/* Contenedor de imágenes con efecto 3D */}
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {images.map((src, index) => {
           const isCenter = index === 1 || index === 2;
           const position =
@@ -49,7 +49,7 @@ const Promociones = () => {
           return (
             <motion.div
               key={index}
-              className={`relative mr-10 mb-6  sm:w-56 md:w-64 lg:w-72 xl:w-80 h-96 lg:h-[450px] xl:h-[600px] rounded-lg shadow-lg overflow-hidden ${position} ${zIndex}`}
+              className={`relative mb-6 sm:w-full md:w-64 lg:w-72 xl:w-80 h-72 sm:h-80 md:h-96 lg:h-[450px] xl:h-[600px] rounded-lg shadow-lg overflow-hidden ${position} ${zIndex}`}
               initial={{ scale: isCenter ? 1 : 0.92, opacity: 0 }}
               animate={{ scale: isCenter ? 1.1 : 1, opacity: 1 }}
               transition={{
