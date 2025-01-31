@@ -14,6 +14,7 @@ import welcomeImage from '../src/Images/imgWelcome.png';
 import WhatsappBut from './Components/WhatsappBut';
 
 import React, { useState, useEffect } from 'react';
+import Promociones from './Pages/Promociones';
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [showModal, setShowModal] = useState(false); // Controla la visibilidad del modal
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/" element={<Home></Home>} />
         <Route path="/portal" element={<InfoPagos></InfoPagos>} />
         <Route path="/autogestion" element={<AsistenciaTecnica />}></Route>
+        <Route path="/promociones" element={<Promociones />}></Route>
         <Route path="/*" element={<NotFound></NotFound>} />
       </Routes>
       <Separator />

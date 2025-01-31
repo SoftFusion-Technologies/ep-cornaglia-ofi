@@ -15,9 +15,9 @@ const PricingCard = ({
     "Canales locales",
     "Sin mínimo de permanencia"
   ],
-  lastFeature = "Adicional sin cargo",
+  lastFeature = "Packs adicionales sin cargo",
   isMostPopular = false,
-  consult = "Consultar vigencia mensual de los pack sin cargo",
+  consult = "Consultar promociones vigentes",
   zone = false,
   zoneConsult = "CONSULTAR ZONA DISPONIBLE",
 }) => {
