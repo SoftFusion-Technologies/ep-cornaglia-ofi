@@ -17,7 +17,7 @@ const Promociones = () => {
   const images = [img1, img2, img3, img4];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen  px-4 text-center">
       {/* Título y descripción */}
       <motion.div
         className="mb-6"
@@ -49,7 +49,7 @@ const Promociones = () => {
           return (
             <motion.div
               key={index}
-              className={`relative mb-6 sm:w-full md:w-64 lg:w-72 xl:w-80 h-72 sm:h-80 md:h-96 lg:h-[450px] xl:h-[600px] rounded-lg shadow-lg overflow-hidden ${position} ${zIndex}`}
+              className={`relative mb-6  sm:mr-10 sm:w-full md:w-64 lg:w-72 xl:w-80 h-72 sm:h-80 md:h-96 lg:h-[450px] xl:h-[600px] rounded-lg shadow-lg overflow-hidden ${position} ${zIndex}`}
               initial={{ scale: isCenter ? 1 : 0.92, opacity: 0 }}
               animate={{ scale: isCenter ? 1.1 : 1, opacity: 1 }}
               transition={{
@@ -58,7 +58,7 @@ const Promociones = () => {
               }}
               whileHover={{
                 scale: 1.15,
-                boxShadow: '0px 12px 32px rgba(0, 0, 0, 0.2)',
+                // boxShadow: '0px 12px 32px rgba(0, 0, 0, 0.2)',
                 opacity: 0.8
               }}
             >
