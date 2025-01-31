@@ -65,7 +65,7 @@ const Promociones = () => {
               <img
                 src={src}
                 alt={`Promoción ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
                 loading="lazy"
               />
             </motion.div>
