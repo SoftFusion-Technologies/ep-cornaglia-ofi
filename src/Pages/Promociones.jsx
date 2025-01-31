@@ -26,7 +26,7 @@ const Promociones = () => {
       </motion.div>
 
       {/* Contenedor de imágenes con efecto 3D */}
-      <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12">
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {images.map((src, index) => {
           const isCenter = index === 1 || index === 2;
           const position =
@@ -40,12 +40,11 @@ const Promociones = () => {
           return (
             <motion.div
               key={index}
-              className={`relative mb-10 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-96 lg:h-[450px] xl:h-[600px] rounded-lg shadow-lg overflow-hidden ${position} ${zIndex} mb-6 sm:mb-0`}
+              className={`relative mr-10 mb-6  sm:w-56 md:w-64 lg:w-72 xl:w-80 h-96 lg:h-[450px] xl:h-[600px] rounded-lg shadow-lg overflow-hidden ${position} ${zIndex}`}
               initial={{ scale: isCenter ? 1 : 0.92, opacity: 0 }}
               animate={{ scale: isCenter ? 1.1 : 1, opacity: 1 }}
               transition={{
                 duration: 0.6,
-                // ease: 'ease-in-out',
                 delay: index * 0.1
               }}
               whileHover={{
@@ -58,9 +57,8 @@ const Promociones = () => {
                 src={src}
                 alt={`Promoción ${index + 1}`}
                 className="w-full h-full object-cover rounded-lg"
-                loading="lazy" // Optimización de carga de imagen
+                loading="lazy"
               />
-  
             </motion.div>
           );
         })}
