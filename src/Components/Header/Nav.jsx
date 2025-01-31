@@ -52,6 +52,56 @@ const Nav = () => {
     element.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleNavClick = (destination) => {
+    if (location.pathname === '/promociones') {
+      // Si estamos en promociones, redirigimos al inicio y luego hacemos el scroll
+      navigate('/');
+      setTimeout(() => {
+        // Una vez en la página principal, hacemos el scroll a la sección correspondiente
+        switch (destination) {
+          case 'inicio':
+            scrollInicio();
+            break;
+          case 'planes':
+            scrollPlanes();
+            break;
+          case 'contact':
+            scrollContact();
+            break;
+          case 'gestion':
+            scrollGestion();
+            break;
+          case 'peliculas':
+            scrollPeliculas();
+            break;
+          default:
+            break;
+        }
+      }, 100); // El tiempo de espera es para asegurarse de que el navigate haya ocurrido antes de hacer el scroll
+    } else {
+      // Si no estamos en promociones, directamente hacemos el scroll
+      switch (destination) {
+        case 'inicio':
+          scrollInicio();
+          break;
+        case 'planes':
+          scrollPlanes();
+          break;
+        case 'contact':
+          scrollContact();
+          break;
+        case 'gestion':
+          scrollGestion();
+          break;
+        case 'peliculas':
+          scrollPeliculas();
+          break;
+        default:
+          break;
+      }
+    }
+  };
+
   return (
     <nav className="bg-slate-100 shadow-md font-sans fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto flex items-center justify-between p-1">
@@ -74,7 +124,7 @@ const Nav = () => {
             <li>
               <Link to="/">
                 <button
-                  onClick={scrollInicio}
+                  onClick={() => handleNavClick('inicio')}
                   className={`text-2xl font-bold ${
                     location.pathname === '/a'
                       ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -91,8 +141,7 @@ const Nav = () => {
 
             <li>
               <Link
-                // to="/gestion"
-                onClick={scrollGestion}
+                onClick={() => handleNavClick('gestion')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/gestion'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -107,7 +156,7 @@ const Nav = () => {
             </li>
             <li>
               <button
-                onClick={scrollPlanes}
+                onClick={() => handleNavClick('planes')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -125,7 +174,7 @@ const Nav = () => {
             </li>
             <li>
               <button
-                onClick={scrollPeliculas}
+                onClick={() => handleNavClick('peliculas')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -141,7 +190,7 @@ const Nav = () => {
 
             <li>
               <button
-                onClick={scrollContact}
+                onClick={() => handleNavClick('contact')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -225,7 +274,7 @@ const Nav = () => {
         <ul className="flex flex-col items-center space-y-8">
           <li>
             <button
-              onClick={scrollInicio}
+              onClick={() => handleNavClick('inicio')}
               className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
             >
               INICIO
@@ -233,7 +282,7 @@ const Nav = () => {
           </li>
           <li>
             <button
-              onClick={scrollGestion}
+              onClick={() => handleNavClick('gestion')}
               className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
             >
               MI SERVICIO
@@ -242,7 +291,7 @@ const Nav = () => {
 
           <li>
             <button
-              onClick={scrollPlanes}
+              onClick={() => handleNavClick('planes')}
               className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
             >
               PLANES
@@ -250,7 +299,7 @@ const Nav = () => {
           </li>
           <li>
             <button
-              onClick={scrollPeliculas}
+              onClick={() => handleNavClick('peliculas')}
               className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
             >
               TV
@@ -258,7 +307,7 @@ const Nav = () => {
           </li>
           <li>
             <button
-              onClick={scrollContact}
+              onClick={() => handleNavClick('contact')}
               className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
             >
               CONTACTO

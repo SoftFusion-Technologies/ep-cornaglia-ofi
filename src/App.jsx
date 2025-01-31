@@ -12,12 +12,15 @@ import AsistenciaTecnica from './Components/Info/AsistenciaTecnica';
 import WelcomeModal from './Components/WelcomeModal';
 import welcomeImage from '../src/Images/imgWelcome.png';
 import WhatsappBut from './Components/WhatsappBut';
+import ModalPromocion from './Components/ModalPromocion';
 
 import React, { useState, useEffect } from 'react';
 import Promociones from './Pages/Promociones';
+
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [showModal, setShowModal] = useState(false); // Controla la visibilidad del modal
+
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -34,7 +37,7 @@ const App = () => {
 
   return (
     <Router>
-      {showModal && <WelcomeModal imageUrl={welcomeImage} />}
+      {/* {showModal && <WelcomeModal imageUrl={welcomeImage} />} */}
       {/* Se elimina el cursor animado por pedido del cliente */}
       {/* <AnimCursor /> */}
       <Nav />
