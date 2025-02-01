@@ -13,38 +13,40 @@ import InfoContacts from '../Components/Info/InfoContacts';
 import HBOImages from '../Components/HBOImages';
 import WhatsAppContact from '../Components/Info/WhatsAppContact';
 
+import Promociones from '../Pages/Promociones'
 const Home = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    // Verifica si ya se ha redirigido en esta sesión
-    if (!localStorage.getItem('hasRedirected')) {
-      const timer = setTimeout(() => {
-        navigate('/promociones'); // Redirige a /promociones
-        localStorage.setItem('hasRedirected', 'true'); // Marca que ya se ha redirigido
-      }, 2000);
+  // useEffect(() => {
+  //   // Verifica si ya se ha redirigido en esta sesión
+  //   if (!localStorage.getItem('hasRedirected')) {
+  //     const timer = setTimeout(() => {
+  //       navigate('/promociones'); // Redirige a /promociones
+  //       localStorage.setItem('hasRedirected', 'true'); // Marca que ya se ha redirigido
+  //     }, 2000);
 
-      return () => clearTimeout(timer); // Limpieza del temporizador
-    }
+  //     return () => clearTimeout(timer); // Limpieza del temporizador
+  //   }
 
-    // Limpiar el localStorage cuando la página se cierre o se recargue
-    const handleBeforeUnload = () => {
-      localStorage.removeItem('hasRedirected');
-    };
+  //   // Limpiar el localStorage cuando la página se cierre o se recargue
+  //   const handleBeforeUnload = () => {
+  //     localStorage.removeItem('hasRedirected');
+  //   };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
+  //   window.addEventListener('beforeunload', handleBeforeUnload);
 
-    // Cleanup: Remover el event listener cuando el componente se desmonte
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [navigate]);
+  //   // Cleanup: Remover el event listener cuando el componente se desmonte
+  //   return () => {
+  //     window.removeEventListener('beforeunload', handleBeforeUnload);
+  //   };
+  // }, [navigate]);
 
   return (
     <div>
       <Header></Header>
-      <CardSection></CardSection>
+      {/* <CardSection></CardSection> */}
       <Main></Main>
+      <Promociones></Promociones>
       <GestServicios></GestServicios>
       <WhatsAppContact></WhatsAppContact>
       <InfoContacts></InfoContacts>

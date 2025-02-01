@@ -25,7 +25,7 @@ const Promociones = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2 mt-32">
+        <h2 className="uppercase text-3xl md:text-4xl font-extrabold text-gray-800 mb-2 mt-32">
           ¡Conoce nuestras promociones!
         </h2>
         <p className="text-gray-600 text-lg md:text-xl mb-10">
