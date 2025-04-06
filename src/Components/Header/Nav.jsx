@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Logo from '../../Images/Conectatelogo.png';
 import '../../Styles/nav.css';
+import MiniNavbar from './MiniNavbar';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -104,6 +105,7 @@ const Nav = () => {
 
   return (
     <nav className="bg-slate-100 shadow-md font-sans fixed top-0 left-0 right-0 z-50">
+      <MiniNavbar />
       <div className="container mx-auto flex items-center justify-between p-1">
         <div className="text-1xl font-bold">
           <Link to="/">

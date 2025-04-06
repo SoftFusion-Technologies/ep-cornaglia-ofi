@@ -25,12 +25,12 @@ const MiPortal = () => {
             Si tienes tu usuario y contraseña, ingresa al siguiente enlace:
           </p>
           <a
-            href="http://200.43.130.20/cliente/login"
+            href="http://200.43.130.21/cliente/login"
             target="_blank"
             rel="noopener noreferrer"
             className="block text-center text-blue-600 hover:text-blue-800 font-semibold underline mb-6"
           >
-            200.43.130.20/cliente/login
+            200.43.130.21/cliente/login
           </a>
           <p className="text-lg text-gray-700 mb-4 text-center">
             Si no tienes tu usuario y contraseña, puedes gestionarlo aquí:

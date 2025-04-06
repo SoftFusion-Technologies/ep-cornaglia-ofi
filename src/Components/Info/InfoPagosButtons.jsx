@@ -4,7 +4,7 @@ const InfoPagosButtons = () => {
   return (
     <div className="flex flex-wrap justify-center gap-6 mb-12">
       <a
-        href="http://200.43.130.20/cliente/login"
+        href="http://200.43.130.21/cliente/login"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-red-500 text-white py-6 text-xl rounded-lg w-96 flex items-center justify-center"
