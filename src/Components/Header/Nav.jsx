@@ -104,7 +104,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-slate-100 shadow-md font-sans fixed top-0 left-0 right-0 z-50">
+    <nav className="bg-transparent  shadow-md font-sans fixed top-0 left-0 right-0 z-50">
       <MiniNavbar />
       <div className="container mx-auto flex items-center justify-between p-1">
         <div className="text-1xl font-bold">
@@ -121,7 +121,7 @@ const Nav = () => {
         </div>
 
         {/* Menu */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-start pl-4">
           <ul className="hidden md:flex space-x-10">
             <li>
               <Link to="/">
