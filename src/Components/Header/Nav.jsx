@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Logo from '../../Images/Conectatelogo.png';
 import '../../Styles/nav.css';
@@ -8,6 +8,8 @@ const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation(); // para obtener ruta actual
   const navigate = useNavigate();
+
+  const [scrolled, setScrolled] = useState(false);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -103,8 +105,29 @@ const Nav = () => {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si se ha scrolleado más del 10% de la altura de la ventana,
+      // o si la ruta actual no es la homepage ("/"), se marca como true.
+      if (
+        window.scrollY > window.innerHeight * 0.5 ||
+        location.pathname !== '/'
+      ) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Ejecutamos el handler en el arranque por si ya se está scrolleando o no está en la home.
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
+
   return (
-    <nav className="bg-transparent  shadow-md font-sans fixed top-0 left-0 right-0 z-50">
+    <nav className="bg-transparent fixed top-0 w-full z-50">
       <MiniNavbar />
       <div className="container mx-auto flex items-center justify-between p-1">
         <div className="text-1xl font-bold">
@@ -119,9 +142,29 @@ const Nav = () => {
             </span>
           </Link>
         </div>
+        {/* Botón hamburguesa para mobile, visible solo en mobile */}
 
-        {/* Menu */}
-        <div className="flex-1 flex justify-start pl-4">
+        {/* Menu alineado a la derecha */}
+        <div className="flex-1 flex justify-end pr-4">
+          <button
+            className="md:hidden text-white hover:text-red-500"
+            onClick={handleMenuToggle}
+          >
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
           <ul className="hidden md:flex space-x-10">
             <li>
               <Link to="/">
@@ -130,11 +173,11 @@ const Nav = () => {
                   className={`text-2xl font-bold ${
                     location.pathname === '/a'
                       ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                      : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                      : scrolled
+                      ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                      : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
                   }`}
-                  style={{
-                    paddingBottom: '10px'
-                  }}
+                  style={{ paddingBottom: '10px' }}
                 >
                   INICIO
                 </button>
@@ -147,22 +190,25 @@ const Nav = () => {
                 className={`text-2xl font-bold ${
                   location.pathname === '/gestion'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : scrolled
+                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
                 }`}
-                style={{
-                  paddingBottom: '10px'
-                }}
+                style={{ paddingBottom: '10px' }}
               >
                 MI SERVICIO
               </Link>
             </li>
+
             <li>
               <button
                 onClick={() => handleNavClick('planes')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : scrolled
+                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
                 }`}
                 style={{
                   paddingBottom: '10px',
@@ -174,17 +220,18 @@ const Nav = () => {
                 PLANES
               </button>
             </li>
+
             <li>
               <button
                 onClick={() => handleNavClick('peliculas')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : scrolled
+                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
                 }`}
-                style={{
-                  paddingBottom: '10px'
-                }}
+                style={{ paddingBottom: '10px' }}
               >
                 TV
               </button>
@@ -196,11 +243,11 @@ const Nav = () => {
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : scrolled
+                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
                 }`}
-                style={{
-                  paddingBottom: '10px'
-                }}
+                style={{ paddingBottom: '10px' }}
               >
                 CONTACTO
               </button>
@@ -212,38 +259,17 @@ const Nav = () => {
                 className={`text-2xl font-bold ${
                   location.pathname === '/promociones'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : 'text-gray-700 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : scrolled
+                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
                 }`}
-                style={{
-                  paddingBottom: '10px'
-                }}
+                style={{ paddingBottom: '10px' }}
               >
                 PROMOCIONES
               </button>
             </li>
           </ul>
         </div>
-
-        {/* Menu button*/}
-        <button
-          className="md:hidden text-gray-700 hover:text-red-500"
-          onClick={handleMenuToggle}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
       </div>
 
       {/* Mobile Menu */}

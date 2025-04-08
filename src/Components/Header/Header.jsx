@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <div
-      className="header mt-24 bg-cover bg-center bg-no-repeat relative"
+      className="header mt-8 bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${FondoHeader})` }}
       id="inicio"
     >
