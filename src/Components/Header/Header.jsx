@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import FondoHeader from '../../Images/NuevasImagenes/CONECTATE-64.webp';
+import FondoHeader from '../../Images/NuevasImagenes/digital-5.png';
 
 const Header = () => {
   const [typedText, setTypedText] = useState('');
@@ -83,7 +83,7 @@ const Header = () => {
 
         <button
           onClick={handleScroll}
-          className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg"
+          className="uppercase bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg"
         >
           Conócenos
         </button>

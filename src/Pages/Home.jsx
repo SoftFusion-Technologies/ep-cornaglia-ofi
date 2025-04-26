@@ -13,7 +13,8 @@ import InfoContacts from '../Components/Info/InfoContacts';
 import HBOImages from '../Components/HBOImages';
 import WhatsAppContact from '../Components/Info/WhatsAppContact';
 
-import Promociones from '../Pages/Promociones'
+import Promociones from '../Pages/Promociones';
+import New2 from '../Components/Header/New2';
 const Home = () => {
   // const navigate = useNavigate();
 
@@ -46,6 +47,7 @@ const Home = () => {
       <Header></Header>
       {/* <CardSection></CardSection> */}
       <Main></Main>
+      <New2></New2>
       {/* <Promociones></Promociones> */}
       <GestServicios></GestServicios>
       <WhatsAppContact></WhatsAppContact>
