@@ -213,7 +213,7 @@ const Nav = () => {
                 style={{
                   paddingBottom: '10px',
                   background: 'none',
-                  border: 'none',
+                  // border: 'none',
                   cursor: 'pointer'
                 }}
               >
@@ -253,7 +253,7 @@ const Nav = () => {
               </button>
             </li>
 
-            <li>
+            {/* <li>
               <button
                 onClick={() => navigate('/promociones')}
                 className={`text-2xl font-bold ${
@@ -267,7 +267,7 @@ const Nav = () => {
               >
                 PROMOCIONES
               </button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -341,14 +341,14 @@ const Nav = () => {
               CONTACTO
             </button>
           </li>
-          <li>
+          {/* <li>
             <button
               onClick={() => navigate('/promociones')}
               className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
             >
               PROMOCIONES
             </button>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

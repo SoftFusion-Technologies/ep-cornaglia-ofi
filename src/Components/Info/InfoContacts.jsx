@@ -48,7 +48,7 @@ const InfoContacts = () => {
   return (
     <div className="container mx-auto p-10 max-w-full overflow-hidden">
       <h1 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">
-        Nuestras Oficinas
+        NUESTRAS OFICINAS
       </h1>
       <div className="bg-white p-10 mt-8 rounded-lg border border-gray-200">
         <h2 className="text-2xl font-bold text-gray-800">Concepción</h2>

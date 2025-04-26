@@ -16,10 +16,10 @@ const GestServicios = () => {
     <div id="gestion">
       <div className="grid grid-cols-1 gap-6 pt-20 max-w-full">
         <div className="bg-gray-50 shadow-md rounded-lg p-6">
-          <h3 className="text-2xl font-bold mb-4">Gestiona tus servicios</h3>
+          <h3 className="text-2xl font-bold mb-4">GESTIONA TUS SERVICIOS</h3>
           <div className="mb-6">
             <p className="text-gray-600">
-              <strong>Con Conectate Wifi</strong>, gestioná tus servicios desde
+              <strong>Con Conectate Group</strong>, gestioná tus servicios desde
               donde quieras.
             </p>
           </div>

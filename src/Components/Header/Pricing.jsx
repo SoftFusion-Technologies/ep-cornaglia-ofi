@@ -45,8 +45,8 @@ const Pricing = () => {
   return (
     <div id="planes">
       <div className="mt-10 max-w-xs w-full m-auto" data-aos="zoom-in">
-        <h1 className="text-center text-5xl my-8 font-semibold">
-          Planes y Servicios
+        <h1 className="uppercase text-center text-5xl my-8 font-semibold">
+          planes y Servicios
         </h1>
         <p className="text-center text-xl semibold mb-4 px-4">
           Conoce nuestros planes diseñados para satisfacer las diferentes

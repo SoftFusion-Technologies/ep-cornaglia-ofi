@@ -46,7 +46,7 @@ const Home = () => {
       <Header></Header>
       {/* <CardSection></CardSection> */}
       <Main></Main>
-      <Promociones></Promociones>
+      {/* <Promociones></Promociones> */}
       <GestServicios></GestServicios>
       <WhatsAppContact></WhatsAppContact>
       <InfoContacts></InfoContacts>
