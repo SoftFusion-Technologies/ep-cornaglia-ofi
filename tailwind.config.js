@@ -5,6 +5,7 @@ export default {
 
   theme: {
     extend: {
+      
       FontFamily: {
         sans: ['Source Sans 3', 'sans-serif']
       },
