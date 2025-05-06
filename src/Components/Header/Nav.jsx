@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import Logo from '../../Images/Conectatelogo.png';
+import Logo from '../../Images/cornaglialogo.png';
 import '../../Styles/nav.css';
 import MiniNavbar from './MiniNavbar';
 
