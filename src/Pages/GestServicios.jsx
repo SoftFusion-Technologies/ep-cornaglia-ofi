@@ -66,10 +66,51 @@ const GestServicios = () => {
           </div>
         </motion.div>
       </motion.div>
+
+      {/* Imagen adicional */}
+      <motion.img
+        src={img}
+        alt="Servicios de reparación"
+        className="mt-12 w-full h-[200px] md:h-[600px] lg:h-[700px] object-contain transform hover:scale-105 transition-transform duration-300"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      />
+
+      <div className="flex flex-col md:flex-row items-center justify-center bg-white p-8 md:p-16">
+        {/* Contenedor de texto con fondo blanco, borde redondeado y altura mínima */}
+        <div className="md:w-1/2 w-full text-center ml-20 md:text-left animate__animated animate__fadeIn animate__delay-300ms  bg-white p-6 min-h-[24rem] transition-transform duration-300 ease-in-out">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn animate__delay-500ms">
+            REPARACIÓN DE LLANTAS
+          </h2>
+          <p className="text-lg text-gray-600 mb-4 animate__animated animate__fadeIn animate__delay-700ms">
+            En{' '}
+            <strong className="text-red-600">
+              CORNAGLIA NEUMÁTICOS Y SERVICIOS
+            </strong>{' '}
+            nos especializamos en la reparación profesional de llantas,
+            recuperando su forma y funcionalidad original. Corregimos golpes,
+            grietas y deformaciones para garantizar tu seguridad y el óptimo
+            desempeño del vehículo. Utilizamos tecnología de precisión para
+            alinear y balancear correctamente, evitando vibraciones y desgaste
+            irregular.
+          </p>
+        </div>
+
+        {/* Contenedor de imagen */}
+        <div className="md:w-1/2 w-full flex justify-center md:justify-end mb-8 md:mb-0 md:mr-28">
+          <img
+            src={img3}
+            alt="Conectate WiFi"
+            className="max-w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-105  max-h-80 md:max-h-96 animate__animated animate__fadeIn animate__delay-1000ms"
+          />
+        </div>
+      </div>
+
       {/* Sección de Servicios Extra */}
-      <div className="py-10 px-4 bg-gray-100">
+      <div className="py-10 px-4">
         <div className="text-center mb-8">
-          <motion.h2 className="text-3xl font-semibold text-gray-800">
+          <motion.h2 className=" uppercase text-3xl font-semibold text-gray-800">
             Otros Servicios Relacionados
           </motion.h2>
           <p className="text-base md:text-lg text-gray-600 leading-relaxed mt-2">
@@ -116,49 +157,6 @@ const GestServicios = () => {
               andar seguro y eficiente.
             </p>
           </motion.div>
-        </div>
-      </div>
-
-      {/* Imagen adicional */}
-      <motion.img
-        src={img}
-        alt="Servicios de reparación"
-        className="mt-12 w-full h-[200px] md:h-[600px] lg:h-[700px] object-contain transform hover:scale-105 transition-transform duration-300"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      />
-
-      <div
-        id="quienesSomos"
-        className="flex flex-col md:flex-row items-center justify-center bg-white p-8 md:p-16"
-      >
-        {/* Contenedor de texto con fondo blanco, borde redondeado y altura mínima */}
-        <div className="md:w-1/2 w-full text-center ml-20 md:text-left animate__animated animate__fadeIn animate__delay-300ms  bg-white p-6 min-h-[24rem] transition-transform duration-300 ease-in-out">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn animate__delay-500ms">
-            REPARACIÓN DE LLANTAS
-          </h2>
-          <p className="text-lg text-gray-600 mb-4 animate__animated animate__fadeIn animate__delay-700ms">
-            En{' '}
-            <strong className="text-red-600">
-              CORNAGLIA NEUMÁTICOS Y SERVICIOS
-            </strong>{' '}
-            nos especializamos en la reparación profesional de llantas,
-            recuperando su forma y funcionalidad original. Corregimos golpes,
-            grietas y deformaciones para garantizar tu seguridad y el óptimo
-            desempeño del vehículo. Utilizamos tecnología de precisión para
-            alinear y balancear correctamente, evitando vibraciones y desgaste
-            irregular.
-          </p>
-        </div>
-
-        {/* Contenedor de imagen */}
-        <div className="md:w-1/2 w-full flex justify-center md:justify-end mb-8 md:mb-0 md:mr-28">
-          <img
-            src={img3}
-            alt="Conectate WiFi"
-            className="max-w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-105  max-h-80 md:max-h-96 animate__animated animate__fadeIn animate__delay-1000ms"
-          />
         </div>
       </div>
     </div>
