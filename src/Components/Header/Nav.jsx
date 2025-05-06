@@ -130,22 +130,8 @@ const Nav = () => {
     <nav className="bg-transparent fixed top-0 w-full z-50">
       <MiniNavbar />
       <div className="container mx-auto flex items-center justify-between p-1">
-        <div className="text-1xl font-bold">
-          <Link to="/">
-            <span>
-              <img
-                className="Logo w-20 md:w-20 h-auto"
-                src={Logo}
-                alt="Logo"
-                onClick={scrollInicio}
-              />
-            </span>
-          </Link>
-        </div>
-        {/* Botón hamburguesa para mobile, visible solo en mobile */}
-
-        {/* Menu alineado a la derecha */}
-        <div className="flex-1 flex justify-end pr-4">
+        {/* Menu alineado a al centro */}
+        <div className="flex-1 flex justify-center pr-4">
           <button
             className="md:hidden text-white hover:text-red-500"
             onClick={handleMenuToggle}
