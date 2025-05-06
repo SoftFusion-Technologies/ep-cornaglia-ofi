@@ -5,12 +5,14 @@ import Contact from '../Components/Contact';
 import GestServicios from './GestServicios';
 
 import New2 from '../Components/Header/New2';
+import VideoBackgroundSection from './VideoBackgroundSection';
 const Home = () => {
   return (
     <div>
       <Header></Header>
       <Main></Main>
       <New2></New2>
+      <VideoBackgroundSection />
       <GestServicios></GestServicios>
       <Contact></Contact>
     </div>

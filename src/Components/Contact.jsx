@@ -57,7 +57,7 @@ const Contact = () => {
 
   return (
     <div
-      id="contacto"
+      id="contact"
       className="flex items-center justify-center min-h-screen bg-gray-100 p-4"
     >
       <div className="w-full max-w-2xl p-8 bg-white rounded-2xl shadow-lg border border-gray-300">

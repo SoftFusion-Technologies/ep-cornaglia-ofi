@@ -23,7 +23,7 @@ const Header = () => {
       }}
     >
       {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-black/20 z-10"></div>
 
       {/* Contenido */}
       <div className="relative z-20 text-center px-4 md:px-8">
@@ -41,27 +41,28 @@ const Header = () => {
           <span className="text-red-500 animate-blink">|HACEMOS|</span>
         </h1>
 
-        <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto text-center animate-[slideUp_2s_ease-out]">
+        <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+            <span className="fadeInUp px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
               Tren delantero
             </span>
-            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+            <span className="fadeInUp delay-1 px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
               Alineado y balanceo
             </span>
-            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+            <span className="fadeInUp delay-2 px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
               Hidráulica
             </span>
-            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+            <span className="fadeInUp delay-3 px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
               Neumáticos
             </span>
-            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+            <span className="fadeInUp delay-4 px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
               Reparación de llantas
             </span>
           </div>
           <span className="block mb-2">Belgrano 376</span>
           <span className="block">Monteros, Tucumán 🇦🇷</span>
         </p>
+
         <button
           onClick={handleScroll}
           className="uppercase bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg"
