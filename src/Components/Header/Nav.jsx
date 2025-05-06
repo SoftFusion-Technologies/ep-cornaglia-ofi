@@ -26,8 +26,8 @@ const Nav = () => {
     });
   };
 
-  const scrollPlanes = () => {
-    const element = document.getElementById('planes');
+  const scrollNeumaticos = () => {
+    const element = document.getElementById('neumaticos');
     if (element) {
       const elementTop = element.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({
@@ -43,23 +43,16 @@ const Nav = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const scrollGestion = () => {
-    const element = document.getElementById('gestion');
+  const scrollServicios = () => {
+    const element = document.getElementById('servicios');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const scrollPeliculas = () => {
-    const element = document.getElementById('peliculas');
+  const scrollNosotros = () => {
+    const element = document.getElementById('nosotros');
     element.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollDonde = () => {
-    const element = document.getElementById('donde');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   const handleNavClick = (destination) => {
@@ -72,22 +65,19 @@ const Nav = () => {
           case 'inicio':
             scrollInicio();
             break;
-          case 'planes':
-            scrollPlanes();
+          case 'neumaticos':
+            scrollNeumaticos();
             break;
           case 'contact':
             scrollContact();
             break;
-          case 'gestion':
-            scrollGestion();
+          case 'servicios':
+            scrollServicios();
             break;
-          case 'peliculas':
-            scrollPeliculas();
+          case 'nosotros':
+            scrollNosotros();
             break;
           default:
-            break;
-          case 'donde':
-            scrollDonde();
             break;
         }
       }, 100); // El tiempo de espera es para asegurarse de que el navigate haya ocurrido antes de hacer el scroll
@@ -97,22 +87,19 @@ const Nav = () => {
         case 'inicio':
           scrollInicio();
           break;
-        case 'planes':
-          scrollPlanes();
+        case 'neumaticos':
+          scrollNeumaticos();
           break;
         case 'contact':
           scrollContact();
           break;
-        case 'gestion':
-          scrollGestion();
+        case 'servicios':
+          scrollServicios();
           break;
-        case 'peliculas':
-          scrollPeliculas();
+        case 'nosotros':
+          scrollNosotros();
           break;
         default:
-          break;
-        case 'donde':
-          scrollDonde();
           break;
       }
     }
@@ -199,9 +186,9 @@ const Nav = () => {
 
             <li>
               <Link
-                onClick={() => handleNavClick('gestion')}
+                onClick={() => handleNavClick('servicios')}
                 className={`text-2xl font-bold ${
-                  location.pathname === '/gestion'
+                  location.pathname === '/servicios'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
                     : scrolled
                     ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
@@ -209,13 +196,13 @@ const Nav = () => {
                 }`}
                 style={{ paddingBottom: '10px' }}
               >
-                MI SERVICIO
+                SERVICIOS
               </Link>
             </li>
 
             <li>
               <button
-                onClick={() => handleNavClick('planes')}
+                onClick={() => handleNavClick('neumaticos')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -230,13 +217,13 @@ const Nav = () => {
                   cursor: 'pointer'
                 }}
               >
-                PLANES
+                NEUMATICOS
               </button>
             </li>
 
             <li>
               <button
-                onClick={() => handleNavClick('peliculas')}
+                onClick={() => handleNavClick('nosotros')}
                 className={`text-2xl font-bold ${
                   location.pathname === '/ss'
                     ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
@@ -246,7 +233,7 @@ const Nav = () => {
                 }`}
                 style={{ paddingBottom: '10px' }}
               >
-                TV
+                NOSOTROS
               </button>
             </li>
 
@@ -265,38 +252,6 @@ const Nav = () => {
                 CONTACTO
               </button>
             </li>
-
-            <li>
-              <button
-                onClick={() => handleNavClick('donde')}
-                className={`text-2xl font-bold ${
-                  location.pathname === '/ss'
-                    ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : scrolled
-                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                }`}
-                style={{ paddingBottom: '10px' }}
-              >
-                DONDE LLEGAMOS
-              </button>
-            </li>
-
-            {/* <li>
-              <button
-                onClick={() => navigate('/promociones')}
-                className={`text-2xl font-bold ${
-                  location.pathname === '/promociones'
-                    ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : scrolled
-                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                }`}
-                style={{ paddingBottom: '10px' }}
-              >
-                PROMOCIONES
-              </button>
-            </li> */}
           </ul>
         </div>
       </div>
@@ -309,7 +264,7 @@ const Nav = () => {
       >
         {/* Close Button */}
         <button
-          className="absolute top-4 right-4 text-[rgb(0,148,221)] hover:text-red-500"
+          className="absolute top-4 right-4 text-white hover:text-red-500"
           onClick={handleCloseMenu}
         >
           <svg
@@ -339,54 +294,37 @@ const Nav = () => {
           </li>
           <li>
             <button
-              onClick={() => handleNavClick('gestion')}
-              className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+              onClick={() => handleNavClick('servicios')}
+              className="text-white text-xl font-bold hover:text-red-500"
             >
-              MI SERVICIO
+              SERVICIOS
             </button>
           </li>
 
           <li>
             <button
-              onClick={() => handleNavClick('planes')}
-              className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+              onClick={() => handleNavClick('neumaticos')}
+              className="text-white text-xl font-bold hover:text-red-500"
             >
-              PLANES
+              NEUMATICOS
             </button>
           </li>
           <li>
             <button
-              onClick={() => handleNavClick('peliculas')}
-              className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+              onClick={() => handleNavClick('nosotros')}
+              className="text-white text-xl font-bold hover:text-red-500"
             >
-              TV
+              NOSOTROS
             </button>
           </li>
           <li>
             <button
               onClick={() => handleNavClick('contact')}
-              className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+              className="text-white text-xl font-bold hover:text-red-500"
             >
               CONTACTO
             </button>
           </li>
-          <li>
-            <button
-              onClick={() => handleNavClick('donde')}
-              className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
-            >
-              DONDE LLEGAMOS
-            </button>
-          </li>
-
-          {/* <li>
-            <button
-              onClick={() => navigate('/promociones')}
-              className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
-            >
-              PROMOCIONES
-            </button>
-          </li> */}
         </ul>
       </div>
     </nav>
