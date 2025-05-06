@@ -3,7 +3,7 @@ import neumavideo from '../../Images/neumavideo.mp4'; // Ajustá el path si est�
 
 const New2 = () => {
   return (
-    <div className="flex flex-col items-center justify-center p-4">
+    <div id="neumaticos" className="flex flex-col items-center justify-center p-4">
       {/* Sección 2: Neumáticos de alta performance */}
       <div className="w-full max-w-7xl py-8 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -18,7 +18,7 @@ const New2 = () => {
             />
           </div>
           <div className="text-left lg:w-1/2">
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg text-black">
               Conducí con total confianza. Nuestros neumáticos están diseñados
               para ofrecer el máximo agarre, durabilidad y rendimiento tanto en
               ciudad como en ruta. Sentí la diferencia en cada kilómetro.

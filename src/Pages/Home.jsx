@@ -17,9 +17,9 @@ const Home = () => {
     <div>
       <Header></Header>
       <Main></Main>
+      <GestServicios></GestServicios>
       <New2></New2>
       {/* <Promociones></Promociones> */}
-      <GestServicios></GestServicios>
       <WhatsAppContact></WhatsAppContact>
       <InfoContacts></InfoContacts>
       <Pricing></Pricing>
