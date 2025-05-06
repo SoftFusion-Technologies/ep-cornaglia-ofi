@@ -16,7 +16,7 @@ const Main = () => {
           En{' '}
           <strong className="text-red-600">
             CORNAGLIA NEUMÁTICOS Y SERVICIOS
-          </strong>
+          </strong>{' '}
           somos una empresa con más de 35 años de experiencia en la prestación
           de servicios automotrices, especializados en neumáticos y
           mantenimiento de vehículos. A lo largo de los años, hemos
