@@ -21,7 +21,7 @@ export default function MiniNavbar() {
           >
             <FaHome size={16} />
           </a>
-          <a
+          {/* <a
             href="https://www.facebook.com/share/15pam24YBw/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,9 +29,9 @@ export default function MiniNavbar() {
             className="transition hover:-translate-y-1"
           >
             <FaFacebookF size={16} />
-          </a>
+          </a> */}
           <a
-            href="https://www.instagram.com/conectate.group"
+            href="https://www.instagram.com/cornaglia.neumaticos.servicios/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -40,7 +40,7 @@ export default function MiniNavbar() {
             <FaInstagram size={16} />
           </a>
           <a
-            href="https://wa.me/543865239239"
+            href="https://api.whatsapp.com/send?phone=543815673497&text=%C2%A1Hola!%0AMe%20gustar%C3%ADa%20hacer%20una%20consulta%3A"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
@@ -60,7 +60,7 @@ export default function MiniNavbar() {
             className="flex items-center space-x-1 hover:text-green-600 transition"
           >
             <FaPhoneAlt size={14} />
-            <span className="text-xs">3865239239</span>
+            <span className="text-xs">+54 381 567-3497</span>
           </a>
           <a
             href="https://www.google.com/maps?q=Sarmiento+48,+Concepción"
@@ -70,7 +70,9 @@ export default function MiniNavbar() {
             className="flex items-center space-x-1 hover:text-blue-600 transition"
           >
             <FaMapMarkerAlt size={14} />
-            <span className="text-xs">Concepción - Sarmiento 48</span>
+            <span className="text-xs">
+              Belgrano 376, Monteros
+            </span>
           </a>
         </div>
       </div>
