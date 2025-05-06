@@ -171,22 +171,6 @@ const Nav = () => {
             </li>
 
             <li>
-              <Link
-                onClick={() => handleNavClick('servicios')}
-                className={`text-2xl font-bold ${
-                  location.pathname === '/servicios'
-                    ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
-                    : scrolled
-                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
-                }`}
-                style={{ paddingBottom: '10px' }}
-              >
-                SERVICIOS
-              </Link>
-            </li>
-
-            <li>
               <button
                 onClick={() => handleNavClick('neumaticos')}
                 className={`text-2xl font-bold ${
@@ -205,6 +189,21 @@ const Nav = () => {
               >
                 NEUMATICOS
               </button>
+            </li>
+            <li>
+              <Link
+                onClick={() => handleNavClick('servicios')}
+                className={`text-2xl font-bold ${
+                  location.pathname === '/servicios'
+                    ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                    : scrolled
+                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                }`}
+                style={{ paddingBottom: '10px' }}
+              >
+                SERVICIOS
+              </Link>
             </li>
 
             <li>
@@ -280,19 +279,18 @@ const Nav = () => {
           </li>
           <li>
             <button
-              onClick={() => handleNavClick('servicios')}
-              className="text-white text-xl font-bold hover:text-red-500"
-            >
-              SERVICIOS
-            </button>
-          </li>
-
-          <li>
-            <button
               onClick={() => handleNavClick('neumaticos')}
               className="text-white text-xl font-bold hover:text-red-500"
             >
               NEUMATICOS
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => handleNavClick('servicios')}
+              className="text-white text-xl font-bold hover:text-red-500"
+            >
+              SERVICIOS
             </button>
           </li>
           <li>

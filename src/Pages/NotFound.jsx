@@ -1,42 +1,57 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import img404 from '../Images/imgBMW.webp'; // Reemplazá esto con la ruta real de tu imagen
 
 const NotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-      <div className="relative mb-8">
-        <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center relative">
-          <div className="absolute animate-ping rounded-full bg-blue-300 w-8 h-8"></div>
-          <div className="absolute animate-ping rounded-full bg-blue-400 w-16 h-16"></div>
-          <div className="absolute animate-ping rounded-full bg-blue-500 w-24 h-24"></div>
-          <div className="z-10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-12 h-12 text-blue-600"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 12m-9 0a9 9 0 1118 0 9 9 0 01-18 0zM7.125 9.75a5.25 5.25 0 019.75 0m-8.563 3.5a2.625 2.625 0 016.5 0"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <h1 className="text-5xl font-bold mb-4">404</h1>
-      <h2 className="text-2xl font-semibold mb-2">Página no encontrada</h2>
-      <p className="text-lg mb-8 text-center px-6">
-        Parece que te has desconectado. Verifica tu conexión a Internet o vuelve al inicio.
-      </p>
-      <a
-        href="/"
-        className="text-white bg-blue-700 px-6 py-3 rounded-full hover:bg-blue-800 transition-colors"
+    <div className="flex flex-col lg:flex-row items-center justify-center h-screen bg-black text-white px-6 relative overflow-hidden">
+      {/* Fondo animado */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-black opacity-60 z-0"></div>
+      <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-blue-700 opacity-30 rounded-full blur-3xl animate-pulse z-0"></div>
+
+      {/* Texto */}
+      <motion.div
+        className="z-10 max-w-xl text-center lg:text-left"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
       >
-        Volver al inicio
-      </a>
+        <motion.h1
+          className="text-[80px] md:text-[100px] font-bold text-blue-500 drop-shadow-lg"
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          404
+        </motion.h1>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+          Página no encontrada
+        </h2>
+        <p className="text-lg text-gray-300 mb-8">
+          Ups, esta ruta no existe. Quizás tomaste una curva equivocada...
+        </p>
+        <Link
+          to="/"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg transition duration-300"
+        >
+          Volver al inicio
+        </Link>
+      </motion.div>
+
+      {/* Imagen */}
+      <motion.div
+        className="z-10 mt-10 lg:mt-0 lg:ml-10 max-w-md"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <img
+          src={img404}
+          alt="Auto perdido"
+          className="w-full h-auto object-contain drop-shadow-2xl"
+        />
+      </motion.div>
     </div>
   );
 };

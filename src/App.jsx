@@ -5,8 +5,6 @@ import Home from './Pages/Home';
 import Footer from './Components/Footer';
 import NotFound from './Pages/NotFound';
 import Separator from './Components/Separator';
-import InfoPagos from './Components/Info/InfoPagos';
-import AsistenciaTecnica from './Components/Info/AsistenciaTecnica';
 import WhatsappBut from './Components/WhatsappBut';
 import React, { useState, useEffect } from 'react';
 
@@ -35,8 +33,6 @@ const App = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Home></Home>} />
-        <Route path="/portal" element={<InfoPagos></InfoPagos>} />
-        <Route path="/autogestion" element={<AsistenciaTecnica />}></Route>
         {/* <Route path="/promociones" element={<Promociones />}></Route> */}
         <Route path="/*" element={<NotFound></NotFound>} />
       </Routes>
