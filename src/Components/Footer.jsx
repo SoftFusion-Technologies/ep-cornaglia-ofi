@@ -63,14 +63,16 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-left">
-        <h2 className="titulo">CONECTATE WIFI</h2>
+        <h2 className="titulo">CORNAGLIA NEUMÁTICOS Y SERVICIOS</h2>
         <p id="description-id" className="description">
-          Brindamos conexiones de alta calidad a través de equipos de última
-          tecnología. Nuestra misión es ofrecer a nuestros clientes un servicio
-          de internet superior y confiable.
+          En Cornaglia nos especializamos en la reparación profesional de
+          llantas, brindando soluciones duraderas y seguras. Combinamos
+          experiencia, tecnología y compromiso para dejar tus llantas como
+          nuevas.
         </p>
+
         <div className="socials">
-          <li>
+          {/* <li>
             <a
               href="https://softfusion.com.ar/"
               target="_blank"
@@ -78,10 +80,10 @@ const Footer = () => {
             >
               <FaFacebook />
             </a>
-          </li>
+          </li> */}
           <li>
             <a
-              href="https://www.instagram.com/conectate.group/"
+              href="https://www.instagram.com/cornaglia.neumaticos.servicios/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,86 +101,59 @@ const Footer = () => {
           </li>
         </div>
       </div>
+
       <ul className="footer-right">
         <li>
-          <h2>Documentos</h2>
+          <h2>Servicios</h2>
           <ul className="box">
             <li>
-              <a
-                href="https://softfusion.com.ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Planes
+              <a href="#reparacion" target="_blank" rel="noopener noreferrer">
+                Reparación de Llantas
               </a>
             </li>
             <li>
-              <a
-                href="https://softfusion.com.ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Paginas Legales
+              <a href="#alineacion" target="_blank" rel="noopener noreferrer">
+                Alineación y Balanceo
               </a>
             </li>
             <li>
-              <a
-                href="https://softfusion.com.ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Documentos IFT
+              <a href="#venta" target="_blank" rel="noopener noreferrer">
+                Venta de Llantas
               </a>
             </li>
             <li>
-              <a
-                href="https://softfusion.com.ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Documentos PROFECO
+              <a href="#mecanica" target="_blank" rel="noopener noreferrer">
+                Mecánica Ligera
               </a>
             </li>
           </ul>
         </li>
 
         <li>
-          <h2>Otros Enlaces</h2>
+          <h2>Información</h2>
           <ul className="box">
             <li>
               <a
-                href="https://softfusion.com.ar/"
+                href="#quienes-somos"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Test de Velocidad
+                ¿Quiénes Somos?
               </a>
             </li>
             <li>
-              <a
-                href="https://softfusion.com.ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ver Cobertura
+              <a href="#garantia" target="_blank" rel="noopener noreferrer">
+                Garantía y Políticas
               </a>
             </li>
             <li>
-              <a
-                href="https://softfusion.com.ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Otros Servicios
+              <a href="#clientes" target="_blank" rel="noopener noreferrer">
+                Clientes Satisfechos
               </a>
             </li>
             <li>
-              <a
-                href="https://softfusion.com.ar/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ver Planes y Precios
+              <a href="#preguntas" target="_blank" rel="noopener noreferrer">
+                Preguntas Frecuentes
               </a>
             </li>
           </ul>
@@ -192,7 +167,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://softfusion.com.ar/"
+                href="https://maps.google.com/?q=Cornaglia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -201,16 +176,17 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://softfusion.com.ar/"
+                href="mailto:info@cornaglia.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Sitio Web Lento?
+                Enviar Correo
               </a>
             </li>
           </ul>
         </li>
       </ul>
+
       <div className="footer-bottom">
         <span>Este sitio web esta desarrollado por SoftFusion</span>
         <br />
