@@ -1,5 +1,4 @@
 import Header from '../Components/Header/Header';
-import CardSection from '../Components/Cards/CardSection';
 // import PricingCard from '../Components/PricingCard';
 import Pricing from '../Components/Header/Pricing';
 import Main from '../Components/Header/Main';
@@ -17,7 +16,6 @@ const Home = () => {
   return (
     <div>
       <Header></Header>
-       {/* <CardSection></CardSection> */}
       <Main></Main>
       <New2></New2>
       {/* <Promociones></Promociones> */}

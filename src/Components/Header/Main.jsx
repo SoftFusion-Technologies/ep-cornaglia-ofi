@@ -13,19 +13,15 @@ const Main = () => {
           ¿QUIÉNES SOMOS?
         </h2>
         <p className="text-lg text-gray-600 mb-4 animate__animated animate__fadeIn animate__delay-700ms">
-          En <strong className="text-red-600">CONECTATE GROUP</strong> somos una
-          empresa local que nació para resolver las necesidades de conexión en
-          nuestro municipio y alrededores. Contamos con un equipo capacitado que
-          instala servicios modernos y utiliza la última tecnología para
-          garantizarte la mejor experiencia en internet.
-          <span className="md:block">
-            <strong className="text-red-600"> Hemos logrado </strong>extender
-            nuestra cobertura a áreas rurales y de difícil acceso, como los
-            cerros tucumanos, incluyendo zonas como el Indio. Tambien por
-            Atahona y Monteagudo en la ciudad de Simoca. Esta expansión nos ha
-            permitido llevar WiFi de alta calidad a lugares donde antes no
-            llegaba, mejorando la conectividad de muchas familias y empresas.
-          </span>
+          En{' '}
+          <strong className="text-red-600">
+            CORNAGLIA NEUMÁTICOS Y SERVICIOS
+          </strong>
+          somos una empresa con más de 35 años de experiencia en la prestación
+          de servicios automotrices, especializados en neumáticos y
+          mantenimiento de vehículos. A lo largo de los años, hemos
+          perfeccionado nuestras habilidades y tecnologías para ofrecer un
+          servicio de alta calidad, confiable y eficiente.
         </p>
       </div>
 

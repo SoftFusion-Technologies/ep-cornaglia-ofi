@@ -19,7 +19,7 @@ const Header = () => {
         backgroundImage: `url(${FondoHeader})`,
         backgroundSize: 'cover', // Para pantallas grandes
         backgroundPosition: 'center', // Centrado de la imagen
-        backgroundAttachment: 'fixed', // Imagen fija al hacer scroll
+        backgroundAttachment: 'fixed' // Imagen fija al hacer scroll
       }}
     >
       {/* Overlay oscuro */}
@@ -30,20 +30,38 @@ const Header = () => {
         {/* Título grande en pantallas grandes */}
         <h1 className="text-2xl md:text-6xl font-bold text-white mb-6 md:block hidden">
           {textToType}
-          <span className="text-red-500 animate-blink">|</span>
+          <br></br>
+          <span className="text-red-500 animate-blink">|HACEMOS|</span>
         </h1>
 
         {/* Título en móviles */}
         <h1 className="text-2xl font-bold text-white mb-6 md:hidden animate__animated animate__fadeInUp">
           {textToType}
+          <br></br>
+          <span className="text-red-500 animate-blink">|HACEMOS|</span>
         </h1>
 
-        <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto animate-[slideUp_2s_ease-out]">
-          • Tren delantero • Alineado y balanceo • Hidráulica • Neumáticos • Reparación de llantas
-          <br />
-          <span className="text-red-500 font-semibold">📍 Belgrano 376</span> – Monteros, Tucumán 🇦🇷
+        <p className="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto text-center animate-[slideUp_2s_ease-out]">
+          <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+              Tren delantero
+            </span>
+            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+              Alineado y balanceo
+            </span>
+            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+              Hidráulica
+            </span>
+            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+              Neumáticos
+            </span>
+            <span className="px-6 py-3 bg-gray-700 rounded-full text-white transition-all duration-300 transform hover:bg-red-500 hover:text-white hover:scale-105">
+              Reparación de llantas
+            </span>
+          </div>
+          <span className="block mb-2">Belgrano 376</span>
+          <span className="block">Monteros, Tucumán 🇦🇷</span>
         </p>
-
         <button
           onClick={handleScroll}
           className="uppercase bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg"
