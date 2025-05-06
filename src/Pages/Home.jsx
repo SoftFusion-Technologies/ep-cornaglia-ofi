@@ -15,6 +15,7 @@ import WhatsAppContact from '../Components/Info/WhatsAppContact';
 
 import Promociones from '../Pages/Promociones';
 import New2 from '../Components/Header/New2';
+import LocalidadesConMapa from '../Components/LocalidadesConMapa';
 const Home = () => {
   // const navigate = useNavigate();
 
@@ -54,6 +55,7 @@ const Home = () => {
       <InfoContacts></InfoContacts>
       <Pricing></Pricing>
       <HBOImages />
+      <LocalidadesConMapa></LocalidadesConMapa>
       <Contact></Contact>
     </div>
   );

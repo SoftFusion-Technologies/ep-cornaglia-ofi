@@ -55,6 +55,13 @@ const Nav = () => {
     element.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollDonde = () => {
+    const element = document.getElementById('donde');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleNavClick = (destination) => {
     if (location.pathname === '/promociones') {
       // Si estamos en promociones, redirigimos al inicio y luego hacemos el scroll
@@ -79,6 +86,9 @@ const Nav = () => {
             break;
           default:
             break;
+          case 'donde':
+            scrollDonde();
+            break;
         }
       }, 100); // El tiempo de espera es para asegurarse de que el navigate haya ocurrido antes de hacer el scroll
     } else {
@@ -100,6 +110,9 @@ const Nav = () => {
           scrollPeliculas();
           break;
         default:
+          break;
+        case 'donde':
+          scrollDonde();
           break;
       }
     }
@@ -253,6 +266,22 @@ const Nav = () => {
               </button>
             </li>
 
+            <li>
+              <button
+                onClick={() => handleNavClick('donde')}
+                className={`text-2xl font-bold ${
+                  location.pathname === '/ss'
+                    ? 'text-custom-blue border-b-4 border-custom-blue hover:border-red-500 hover:text-red-500'
+                    : scrolled
+                    ? 'text-gray-400 hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                    : 'text-white hover:border-b-4 hover:border-red-500 hover:text-red-500'
+                }`}
+                style={{ paddingBottom: '10px' }}
+              >
+                DONDE LLEGAMOS
+              </button>
+            </li>
+
             {/* <li>
               <button
                 onClick={() => navigate('/promociones')}
@@ -341,6 +370,15 @@ const Nav = () => {
               CONTACTO
             </button>
           </li>
+          <li>
+            <button
+              onClick={() => handleNavClick('donde')}
+              className="text-[rgb(0,148,221)] text-xl font-bold hover:text-red-500"
+            >
+              DONDE LLEGAMOS
+            </button>
+          </li>
+
           {/* <li>
             <button
               onClick={() => navigate('/promociones')}
