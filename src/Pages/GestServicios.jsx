@@ -77,16 +77,16 @@ const GestServicios = () => {
         transition={{ duration: 1, delay: 1 }}
       />
 
-      <div className="flex flex-col md:flex-row items-center justify-center bg-white p-8 md:p-16">
-        {/* Contenedor de texto con fondo blanco, borde redondeado y altura mínima */}
-        <div className="md:w-1/2 w-full text-center ml-20 md:text-left animate__animated animate__fadeIn animate__delay-300ms  bg-white p-6 min-h-[24rem] transition-transform duration-300 ease-in-out">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn animate__delay-500ms">
-            REPARACIÓN DE LLANTAS
+      <div className="flex flex-col md:flex-row items-center justify-center bg-white p-6 md:p-16 gap-10">
+        {/* Contenedor de texto */}
+        <div className="w-full md:w-1/2 text-center md:text-left bg-white p-6 min-h-[24rem] animate__animated animate__fadeIn animate__delay-300ms">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 animate__animated animate__fadeIn animate__delay-500ms uppercase">
+            Reparación de Llantas
           </h2>
-          <p className="text-lg text-gray-600 mb-4 animate__animated animate__fadeIn animate__delay-700ms">
+          <p className="text-base sm:text-lg text-gray-600 animate__animated animate__fadeIn animate__delay-700ms leading-relaxed">
             En{' '}
             <strong className="text-red-600">
-              CORNAGLIA NEUMÁTICOS Y SERVICIOS
+              Cornaglia Neumáticos y Servicios
             </strong>{' '}
             nos especializamos en la reparación profesional de llantas,
             recuperando su forma y funcionalidad original. Corregimos golpes,
@@ -98,11 +98,11 @@ const GestServicios = () => {
         </div>
 
         {/* Contenedor de imagen */}
-        <div className="md:w-1/2 w-full flex justify-center md:justify-end mb-8 md:mb-0 md:mr-28">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end animate__animated animate__fadeIn animate__delay-1000ms">
           <img
             src={img3}
-            alt="Conectate WiFi"
-            className="max-w-full h-auto transition-transform duration-300 ease-in-out transform hover:scale-105  max-h-80 md:max-h-96 animate__animated animate__fadeIn animate__delay-1000ms"
+            alt="Reparación de Llantas"
+            className="max-w-full h-auto max-h-80 md:max-h-96 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out"
           />
         </div>
       </div>
