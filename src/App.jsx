@@ -7,6 +7,8 @@ import NotFound from './Pages/NotFound';
 import Separator from './Components/Separator';
 import WhatsappBut from './Components/WhatsappBut';
 import React, { useState, useEffect } from 'react';
+import Mapa from './Components/Mapa';
+import { ContactProvider } from './context/ContactContext';
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -26,20 +28,23 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
-      {/* {showModal && <WelcomeModal imageUrl={welcomeImage} />} */}
-      {/* Se elimina el cursor animado por pedido del cliente */}
-      {/* <AnimCursor /> */}
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home></Home>} />
-        {/* <Route path="/promociones" element={<Promociones />}></Route> */}
-        <Route path="/*" element={<NotFound></NotFound>} />
-      </Routes>
-      <Separator />
-      <WhatsappBut />
-      <Footer />
-    </Router>
+    <ContactProvider>
+      <Router>
+        {/* {showModal && <WelcomeModal imageUrl={welcomeImage} />} */}
+        {/* Se elimina el cursor animado por pedido del cliente */}
+        {/* <AnimCursor /> */}
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home></Home>} />
+          {/* <Route path="/promociones" element={<Promociones />}></Route> */}
+          <Route path="/*" element={<NotFound></NotFound>} />
+        </Routes>
+        <WhatsappBut />
+        {/* <Separator /> */}
+        <Mapa></Mapa>
+        <Footer />
+      </Router>
+    </ContactProvider>
   );
 };
 
